@@ -1,8 +1,8 @@
-package com.upc.wisegreenapi.controller;
+package com.upc.widegreenapi.controller;
 
-import com.upc.wisegreenapi.dtos.UsuarioDTO;
-import com.upc.wisegreenapi.entities.Usuario;
-import com.upc.wisegreenapi.repositories.UsuarioRepository;
+import com.upc.widegreenapi.dtos.UsuarioDTO;
+import com.upc.widegreenapi.entities.Usuario;
+import com.upc.widegreenapi.repositories.UsuarioRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

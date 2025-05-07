@@ -11,11 +11,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class EventDTO {
-    private Long id;
-    private String title;
-    private String description;
-    private String location;
-    private LocalDateTime eventDate;
-    private String createdByUsername; // para evitar enviar el objeto completo
+public class EventoDTO {
+    private Long idEvento;
+    private String nombre;
+    private String descripcion;
+    private String ubicacion;
+    private LocalDateTime fecha;
+    private Long idTipoEvento;
+
 }

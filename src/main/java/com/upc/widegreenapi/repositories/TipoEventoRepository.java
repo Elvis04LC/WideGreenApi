@@ -1,4 +1,8 @@
 package com.upc.widegreenapi.repositories;
 
-public interface TipoEventoRepository {
+import com.upc.widegreenapi.entities.TipoEvento;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TipoEventoRepository extends JpaRepository<TipoEvento, Long> {
+
 }

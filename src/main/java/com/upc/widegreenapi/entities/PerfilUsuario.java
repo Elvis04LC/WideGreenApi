@@ -1,4 +1,4 @@
-package com.upc.wisegreenapi.entities;
+package com.upc.widegreenapi.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

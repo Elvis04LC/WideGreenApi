@@ -1,4 +1,4 @@
-package com.upc.wisegreenapi.dtos;
+package com.upc.widegreenapi.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

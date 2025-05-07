@@ -9,23 +9,24 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "events")
+@Table(name = "evento")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Event {
+public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id_evento")
+    private Long idEvento;
 
-    private String title;
-    private String description;
-    private String location;
-    private LocalDateTime eventDate;
+    private String nombre;
+    private String descripcion;
+    private LocalDateTime fecha;
+    private String ubicacion;
 
     @ManyToOne
-    @JoinColumn(name = "created_by")
-    private Usuario createdBy;
+    @JoinColumn(name = "id_tipo_evento")
+    private TipoEvento tipoEvento;
 
 }

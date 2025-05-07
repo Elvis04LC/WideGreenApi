@@ -1,10 +1,17 @@
-package com.upc.wisegreenapi.controller;
+package com.upc.widegreenapi.controller;
 
-import com.upc.wisegreenapi.repositories.PublicacionRepository;
-import com.upc.wisegreenapi.repositories.UsuarioRepository;
+import com.upc.widegreenapi.dtos.PublicacionDTO;
+import com.upc.widegreenapi.entities.Publicacion;
+import com.upc.widegreenapi.entities.Usuario;
+import com.upc.widegreenapi.repositories.PublicacionRepository;
+import com.upc.widegreenapi.repositories.UsuarioRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/publicaciones")

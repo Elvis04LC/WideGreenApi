@@ -1,4 +1,4 @@
-package com.upc.wisegreenapi.entities;
+package com.upc.widegreenapi.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -17,6 +17,7 @@ import java.time.LocalDateTime;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_usuario")
     private Long idUsuario;
 
     @Column(nullable = false, unique = true)

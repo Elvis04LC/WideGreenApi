@@ -1,7 +1,7 @@
-package com.upc.wisegreenapi.repositories;
+package com.upc.widegreenapi.repositories;
 
-import com.upc.wisegreenapi.entities.Publicacion;
-import com.upc.wisegreenapi.entities.Usuario;
+import com.upc.widegreenapi.entities.Publicacion;
+import com.upc.widegreenapi.entities.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

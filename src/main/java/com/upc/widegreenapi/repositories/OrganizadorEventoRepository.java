@@ -1,4 +1,9 @@
 package com.upc.widegreenapi.repositories;
 
-public interface OrganizadorEventoRepository {
+import com.upc.widegreenapi.entities.OrganizadorEvento;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrganizadorEventoRepository extends JpaRepository<OrganizadorEvento, Long> {
+
+
 }
