@@ -6,7 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "evento")
@@ -22,7 +24,8 @@ public class Evento {
 
     private String nombre;
     private String descripcion;
-    private LocalDateTime fecha;
+    private LocalDate fecha;
+    private LocalTime hora;
     private String ubicacion;
 
     @ManyToOne

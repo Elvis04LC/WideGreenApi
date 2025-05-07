@@ -2,6 +2,7 @@ package com.upc.widegreenapi.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "calendario")
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Calendario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

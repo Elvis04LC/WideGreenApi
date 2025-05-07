@@ -34,6 +34,7 @@ public class EventoServiceImpl implements EventoService {
                 .descripcion(dto.getDescripcion())
                 .ubicacion(dto.getUbicacion())
                 .fecha(dto.getFecha())
+                .hora(dto.getHora()) // Agregado
                 .tipoEvento(tipoEvento)
                 .build();
 
@@ -49,5 +50,35 @@ public class EventoServiceImpl implements EventoService {
                     return dto;
                 })
                 .collect(Collectors.toList());
+    }
+    @Override
+    public EventoDTO obtenerEventoPorId(Long id) {
+        Evento evento = eventoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Evento no encontrado"));
+        return modelMapper.map(evento, EventoDTO.class);
+    }
+
+    @Override
+    public EventoDTO actualizarEvento(Long id, EventoDTO eventoDTO) {
+        Evento evento = eventoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Evento no encontrado"));
+
+        TipoEvento tipoEvento = tipoEventoRepository.findById(eventoDTO.getIdTipoEvento())
+                .orElseThrow(() -> new RuntimeException("Tipo de evento no encontrado"));
+
+        evento.setNombre(eventoDTO.getNombre());
+        evento.setDescripcion(eventoDTO.getDescripcion());
+        evento.setFecha(eventoDTO.getFecha());
+        evento.setHora(eventoDTO.getHora());
+        evento.setUbicacion(eventoDTO.getUbicacion());
+        evento.setTipoEvento(tipoEvento);
+
+        Evento actualizado = eventoRepository.save(evento);
+        return modelMapper.map(actualizado, EventoDTO.class);
+    }
+
+    @Override
+    public void eliminarEvento(Long id) {
+        eventoRepository.deleteById(id);
     }
 }

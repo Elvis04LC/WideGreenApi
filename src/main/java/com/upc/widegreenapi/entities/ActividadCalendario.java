@@ -23,6 +23,11 @@ public class ActividadCalendario {
     @JoinColumn(name = "id_calendario", referencedColumnName = "id_calendario")
     private Calendario calendario;
 
+    @ManyToOne
+    @JoinColumn(name = "id_evento", nullable = true)
+    private Evento evento;
+
+
     private String titulo;
 
     private LocalDate fecha;
