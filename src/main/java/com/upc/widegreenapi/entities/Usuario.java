@@ -35,5 +35,6 @@ public class Usuario {
     @Column(nullable = false)
     private String role; // Ej: ADMIN o USER
 
+    private String edad; //test
 
 }
