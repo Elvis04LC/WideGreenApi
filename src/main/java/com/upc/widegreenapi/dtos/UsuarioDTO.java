@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @Builder
 public class UsuarioDTO {
     private Long idUsuario;
-    private String email; //testeo
+    private String email; //para ver
 }
