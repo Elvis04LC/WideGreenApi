@@ -30,7 +30,6 @@ public class PerfilUsuarioServiceImpl implements PerfilUsuarioService {
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
         PerfilUsuario perfil = new PerfilUsuario();
-        perfil.setUsuario(usuario);
         perfil.setNombre(dto.getNombre());
         perfil.setApellido(dto.getApellido());
         perfil.setFoto(dto.getFoto());
