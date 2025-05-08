@@ -2,6 +2,7 @@ package com.upc.widegreenapi.serviceImpl;
 
 import com.upc.widegreenapi.dtos.UsuarioDTO;
 import com.upc.widegreenapi.entities.Usuario;
+import com.upc.widegreenapi.exceptions.UsuarioNotFoundException;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.UsuarioService;
 import org.modelmapper.ModelMapper;
@@ -40,7 +41,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public UsuarioDTO obtenerUsuarioPorId(Long id) {
         Usuario usuario = usuarioRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+                .orElseThrow(() -> new UsuarioNotFoundException("Usuario no encontrado con ID: " + id));
         return modelMapper.map(usuario, UsuarioDTO.class);
     }
 }
