@@ -1,5 +1,6 @@
 package com.upc.widegreenapi.serviceImpl;
 
+import com.upc.widegreenapi.dtos.MensajeDTO;
 import com.upc.widegreenapi.dtos.OrganizadorEventoDTO;
 import com.upc.widegreenapi.entities.OrganizadorEvento;
 import com.upc.widegreenapi.repositories.OrganizadorEventoRepository;
@@ -30,6 +31,12 @@ public class OrganizadorEventoServiceImpl implements OrganizadorEventoService {
         return organizadorRepository.findAll().stream()
                 .map(o -> modelMapper.map(o, OrganizadorEventoDTO.class))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public String eliminarOrganizador(Long id) {
+        organizadorRepository.deleteById(id);
+        return "Ciudad eliminada";
     }
 }
 
