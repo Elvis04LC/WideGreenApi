@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/eventos")
@@ -40,5 +41,11 @@ public class EventoController {
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         eventoService.eliminarEvento(id);
+    }
+
+    //Obtener evento por ubicacion
+    @GetMapping("/{ubicacion}")
+    public EventoDTO obtenerEventoPorUbicacion(@PathVariable String ubicacion) {
+        return eventoService.obtenerEventoPorUbicacion(ubicacion);
     }
 }
