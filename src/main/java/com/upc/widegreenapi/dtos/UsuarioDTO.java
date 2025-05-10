@@ -11,5 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class UsuarioDTO {
     private Long idUsuario;
-    private String email; //para ver
+    private String email;
+    private String username;
+    private String password; //para ver
 }

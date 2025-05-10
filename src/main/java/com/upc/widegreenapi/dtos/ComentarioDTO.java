@@ -15,5 +15,5 @@ public class ComentarioDTO {
     private Long idComentario;
     private String contenido;
     private LocalDateTime fecha;
-    private String autorEmail;
+    private String autorEmail; //email
 }

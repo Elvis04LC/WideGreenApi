@@ -1,10 +1,13 @@
 package com.upc.widegreenapi.entities;
 
 import jakarta.persistence.*;
+
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 
 
@@ -26,7 +29,8 @@ public class Usuario {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
+    @NotNull(message = "El email no puede ser nulo")
     private String email;
 
     @Column(name = "fecha_registro")
@@ -34,7 +38,7 @@ public class Usuario {
 
     @Column(nullable = false)
     private String role; // Ej: ADMIN o USER
-
+    
     //Borrar atributo edad
 
 }
