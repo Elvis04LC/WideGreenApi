@@ -8,6 +8,7 @@ import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.PerfilUsuarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,15 +27,15 @@ public class PerfilUsuarioServiceImpl implements PerfilUsuarioService {
 
     @Override
     public PerfilUsuarioDTO registrarPerfil(PerfilUsuarioDTO dto) {
-        Usuario usuario = usuarioRepository.findById(dto.getIdUsuario())
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+        // Obtener el usuario autenticado
+        Usuario usuario = (Usuario) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
         PerfilUsuario perfil = new PerfilUsuario();
         perfil.setNombre(dto.getNombre());
         perfil.setApellido(dto.getApellido());
         perfil.setFoto(dto.getFoto());
         perfil.setBio(dto.getBio());
-
+        perfil.setUsuario(usuario);  // Asocia automáticamente el usuario autenticado
         PerfilUsuario guardado = perfilUsuarioRepository.save(perfil);
         return modelMapper.map(guardado, PerfilUsuarioDTO.class);
     }

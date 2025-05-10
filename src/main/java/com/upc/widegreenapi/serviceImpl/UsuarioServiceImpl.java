@@ -2,6 +2,7 @@ package com.upc.widegreenapi.serviceImpl;
 
 import com.upc.widegreenapi.dtos.UsuarioDTO;
 import com.upc.widegreenapi.entities.Usuario;
+import com.upc.widegreenapi.exceptions.InvalidEmailException;
 import com.upc.widegreenapi.exceptions.UsuarioNotFoundException;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.UsuarioService;
@@ -9,6 +10,7 @@ import org.modelmapper.ModelMapper;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -16,6 +18,7 @@ import java.util.List;
 
 
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 @Service
@@ -28,18 +31,42 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Autowired
     private ModelMapper modelMapper;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public UsuarioDTO registrarUsuario(UsuarioDTO dto) {
+
         logger.info("Iniciando el registro de un nuevo usuario con email: " + dto.getEmail());
+        if (dto.getEmail() == null || dto.getEmail().trim().isEmpty()) {
+            throw new InvalidEmailException("El email no puede estar vacío");
+        }
+
+        // Validación de formato de email
+        String email = dto.getEmail().trim().toLowerCase();
+        String emailRegex = "^(?=.{1,254}$)[A-Za-z0-9+_-]+(?:\\.[A-Za-z0-9+_-]+)*@(?:[A-Za-z0-9-]+\\.)+[A-Za-z]{2,}$";
+
+        if (!Pattern.matches(emailRegex, email)) {
+            logger.severe("Email inválido detectado: " + email);
+            throw new InvalidEmailException("El formato del email es inválido");
+        }
+        if (usuarioRepository.existsByEmail(dto.getEmail())) {
+            throw new RuntimeException("El email ya está registrado.");
+        }
+        if (usuarioRepository.existsByUsername(dto.getUsername())) {
+            throw new RuntimeException("El nombre de usuario ya está registrado.");
+        }
+        String encodedPassword = passwordEncoder.encode(dto.getPassword());
         Usuario usuario = Usuario.builder()
-                .email(dto.getEmail())
-                .password("123456") // temporal
+                .email(dto.getEmail().trim())
+                .password(encodedPassword)
                 .fechaRegistro(LocalDateTime.now())
                 .build();
-        UsuarioDTO usuarioDTO = modelMapper.map(usuarioRepository.save(usuario), UsuarioDTO.class);
-
-        logger.info("Usuario registrado exitosamente con ID: " + usuarioDTO.getIdUsuario());
+        logger.info("Guardando usuario en la base de datos con email: " + usuario.getEmail());
+        Usuario savedUser = usuarioRepository.save(usuario);
+        logger.info("Usuario registrado exitosamente con ID: " + savedUser.getIdUsuario());
+        UsuarioDTO usuarioDTO = modelMapper.map(savedUser, UsuarioDTO.class);
+        logger.info("Usuario registrado exitosamente con ID: " + savedUser.getIdUsuario());
         return usuarioDTO;
     }
 
