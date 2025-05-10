@@ -2,13 +2,19 @@ package com.upc.widegreenapi.controller;
 
 import com.upc.widegreenapi.dtos.UsuarioDTO;
 import com.upc.widegreenapi.entities.Usuario;
+import com.upc.widegreenapi.exceptions.InvalidEmailException;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
+import com.upc.widegreenapi.service.UsuarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
-import java.time.LocalDateTime;
+
 import java.util.List;
+
 import java.util.stream.Collectors;
 
 @RestController
@@ -18,17 +24,19 @@ public class UsuarioController {
     private UsuarioRepository usuarioRepository;
 
     @Autowired
+    private UsuarioService usuarioService;
+
+    @Autowired
     private ModelMapper modelMapper;
 
     @PostMapping("/registrar")
-    public UsuarioDTO registrarUsuario(@RequestBody UsuarioDTO usuarioDTO) {
-        Usuario usuario = Usuario.builder()
-                .email(usuarioDTO.getEmail())
-                .password("123456") // temporal, luego se reemplaza con codificación
-                .fechaRegistro(LocalDateTime.now())
-                .build();
-        Usuario guardado = usuarioRepository.save(usuario);
-        return modelMapper.map(guardado, UsuarioDTO.class);
+    public ResponseEntity<UsuarioDTO> registrarUsuario(@RequestBody UsuarioDTO usuarioDTO) {
+        try {
+            UsuarioDTO newUserDTO = usuarioService.registrarUsuario(usuarioDTO);
+            return new ResponseEntity<>(newUserDTO, HttpStatus.CREATED);
+        } catch (InvalidEmailException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
+        }
     }
 
     @GetMapping

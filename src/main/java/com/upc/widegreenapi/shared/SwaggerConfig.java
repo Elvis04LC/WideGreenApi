@@ -13,20 +13,12 @@ import org.springframework.context.annotation.Configuration;
 public class SwaggerConfig {
     @Bean
     public OpenAPI wideGreenApiOpenAPI() {
-        OpenAPI openAPI = new OpenAPI()
+        return new OpenAPI()
                 .info(new Info()
                         .title("WideGreen API")
-                        .version("1.0")
-                        .description("Documentación de la API para WideGreen 🌱"))
-                .addSecurityItem(new SecurityRequirement().addList("bearerAuth"))
-                .components(new Components()
-                        .addSecuritySchemes("bearerAuth", new SecurityScheme()
-                                .name("Authorization")
-                                .type(SecurityScheme.Type.HTTP)
-                                .scheme("bearer")
-                                .bearerFormat("JWT")));
-
-        return openAPI;
-
+                        .description("WideGreen API with Spring Security")
+                        .version("1.0.0")
+                );
     }
+
 }
