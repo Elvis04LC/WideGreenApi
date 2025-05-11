@@ -3244,3 +3244,409 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2025-05-11T12:30:37.735-05:00  INFO 13604 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-11T12:30:37.738-05:00  INFO 13604 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-05-11T12:30:37.739-05:00  INFO 13604 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-11T12:30:40.866-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 16272 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-11T12:30:40.868-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T12:30:40.904-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-11T12:30:40.904-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-11T12:30:41.564-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T12:30:41.631-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 11 JPA repository interfaces.
+2025-05-11T12:30:42.044-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-11T12:30:42.054-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-11T12:30:42.054-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-11T12:30:42.096-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-11T12:30:42.097-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1193 ms
+2025-05-11T12:30:42.190-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T12:30:42.236-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-11T12:30:42.273-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T12:30:42.491-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T12:30:42.516-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T12:30:42.637-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@450eeda2
+2025-05-11T12:30:42.638-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T12:30:42.692-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T12:30:43.625-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T12:30:44.592-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T12:30:44.912-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T12:30:44.957-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-11T12:30:45.361-05:00  WARN 16272 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-11T12:30:45.487-05:00 DEBUG 16272 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 54 mappings in 'requestMappingHandlerMapping'
+2025-05-11T12:30:45.549-05:00 DEBUG 16272 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-11T12:30:45.636-05:00 DEBUG 16272 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-11T12:30:45.670-05:00 DEBUG 16272 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-11T12:30:45.779-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-11T12:30:45.809-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-11T12:30:45.817-05:00  INFO 16272 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 5.311 seconds (process running for 5.794)
+2025-05-11T12:30:55.123-05:00  INFO 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-11T12:30:55.124-05:00  INFO 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-11T12:30:55.124-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-11T12:30:55.124-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-11T12:30:55.124-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-11T12:30:55.125-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2e816f
+2025-05-11T12:30:55.125-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@740e0866
+2025-05-11T12:30:55.125-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-11T12:30:55.125-05:00  INFO 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-11T12:30:55.307-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : DELETE "/api/comentarios/eliminar/2", parameters={}
+2025-05-11T12:30:55.308-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.ComentarioController#eliminarComentario(Long)
+2025-05-11T12:30:55.390-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T12:30:55.391-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-05-11T12:30:55.392-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 204 NO_CONTENT
+2025-05-11T12:47:19.214-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/publicaiones", parameters={}
+2025-05-11T12:47:19.215-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-11T12:47:19.220-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-11T12:47:19.222-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/publicaiones.]
+2025-05-11T12:47:19.222-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-11T12:47:23.771-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/publicaiones", parameters={}
+2025-05-11T12:47:23.772-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-11T12:47:23.774-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-11T12:47:23.775-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/publicaiones.]
+2025-05-11T12:47:23.775-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-11T12:47:30.228-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/publicaciones", parameters={}
+2025-05-11T12:47:30.228-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#listarPublicaciones()
+2025-05-11T12:47:30.268-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T12:47:30.269-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PublicacionDTO(idPublicacion=1, titulo=Impacto del Cambio Climático, contenido=Hoy quiero hablar so (truncated)...]
+2025-05-11T12:47:30.299-05:00 DEBUG 16272 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-11T12:50:07.144-05:00  INFO 16272 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-11T12:50:07.189-05:00  INFO 16272 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-11T12:50:07.193-05:00  INFO 16272 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T12:50:07.195-05:00  INFO 16272 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-11T12:50:07.198-05:00  INFO 16272 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-11T13:01:50.648-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 8364 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-11T13:01:50.650-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T13:01:50.692-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-11T13:01:50.692-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-11T13:01:51.409-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T13:01:51.490-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 13 JPA repository interfaces.
+2025-05-11T13:01:51.912-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-11T13:01:51.927-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-11T13:01:51.928-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-11T13:01:51.983-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-11T13:01:51.983-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1290 ms
+2025-05-11T13:01:52.090-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T13:01:52.137-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-11T13:01:52.169-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T13:01:52.384-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T13:01:52.409-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T13:01:52.534-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29d544f0
+2025-05-11T13:01:52.536-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T13:01:52.593-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T13:01:53.572-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T13:01:54.776-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T13:01:55.175-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T13:01:55.237-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-11T13:01:55.577-05:00  WARN 8364 --- [WideGreenApi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'publicacionCategoriaController': Unsatisfied dependency expressed through field 'publicacionCategoriaService': Error creating bean with name 'publicacionCategoriaServiceImpl': Unsatisfied dependency expressed through field 'publicacionCategoriaRepository': Error creating bean with name 'publicacionCategoriaRepository' defined in com.upc.widegreenapi.repositories.PublicacionCategoriaRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); No property 'id' found for type 'Publicacion'; Traversed path: PublicacionCategoria.publicacion
+2025-05-11T13:01:55.578-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T13:01:55.580-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-11T13:01:55.582-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-11T13:01:55.587-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-05-11T13:01:55.600-05:00  INFO 8364 --- [WideGreenApi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-11T13:01:55.615-05:00 ERROR 8364 --- [WideGreenApi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'publicacionCategoriaController': Unsatisfied dependency expressed through field 'publicacionCategoriaService': Error creating bean with name 'publicacionCategoriaServiceImpl': Unsatisfied dependency expressed through field 'publicacionCategoriaRepository': Error creating bean with name 'publicacionCategoriaRepository' defined in com.upc.widegreenapi.repositories.PublicacionCategoriaRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); No property 'id' found for type 'Publicacion'; Traversed path: PublicacionCategoria.publicacion
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1451) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
+	at com.upc.widegreenapi.WideGreenApiApplication.main(WideGreenApiApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.5.jar:3.4.5]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'publicacionCategoriaServiceImpl': Unsatisfied dependency expressed through field 'publicacionCategoriaRepository': Error creating bean with name 'publicacionCategoriaRepository' defined in com.upc.widegreenapi.repositories.PublicacionCategoriaRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); No property 'id' found for type 'Publicacion'; Traversed path: PublicacionCategoria.publicacion
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1451) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'publicacionCategoriaRepository' defined in com.upc.widegreenapi.repositories.PublicacionCategoriaRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); No property 'id' found for type 'Publicacion'; Traversed path: PublicacionCategoria.publicacion
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 41 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); No property 'id' found for type 'Publicacion'; Traversed path: PublicacionCategoria.publicacion
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:431) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.util.Lazy.get(Lazy.java:113) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 50 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.upc.widegreenapi.repositories.PublicacionCategoriaRepository.findByPublicacion_Id(java.lang.Long); No property 'id' found for type 'Publicacion'; Traversed path: PublicacionCategoria.publicacion
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:260) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	... 62 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'id' found for type 'Publicacion'; Traversed path: PublicacionCategoria.publicacion
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:415) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:387) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330) ~[na:na]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:259) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:260) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:389) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:390) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:103) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	... 66 common frames omitted
+
+2025-05-11T13:07:41.305-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 19292 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-11T13:07:41.308-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T13:07:41.345-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-11T13:07:41.345-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-11T13:07:42.014-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T13:07:42.085-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 13 JPA repository interfaces.
+2025-05-11T13:07:42.493-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-11T13:07:42.503-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-11T13:07:42.503-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-11T13:07:42.544-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-11T13:07:42.544-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1198 ms
+2025-05-11T13:07:42.637-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T13:07:42.680-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-11T13:07:42.707-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T13:07:42.925-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T13:07:42.950-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T13:07:43.173-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@777493e0
+2025-05-11T13:07:43.175-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T13:07:43.225-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T13:07:44.146-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T13:07:45.209-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T13:07:45.526-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T13:07:45.577-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-11T13:07:45.976-05:00  WARN 19292 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-11T13:07:46.097-05:00 DEBUG 19292 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 59 mappings in 'requestMappingHandlerMapping'
+2025-05-11T13:07:46.160-05:00 DEBUG 19292 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-11T13:07:46.246-05:00 DEBUG 19292 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-11T13:07:46.280-05:00 DEBUG 19292 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-11T13:07:46.388-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-11T13:07:46.419-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-11T13:07:46.426-05:00  INFO 19292 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 5.474 seconds (process running for 5.949)
+2025-05-11T13:07:50.234-05:00  INFO 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-11T13:07:50.234-05:00  INFO 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-11T13:07:50.235-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-11T13:07:50.235-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-11T13:07:50.235-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-11T13:07:50.237-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@35984408
+2025-05-11T13:07:50.237-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6533f78f
+2025-05-11T13:07:50.238-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-11T13:07:50.238-05:00  INFO 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-11T13:08:49.915-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2025-05-11T13:08:49.917-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.AuthController#login(AuthRequestDTO)
+2025-05-11T13:08:49.970-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthRequestDTO(email=elvis@upc.edu.pe, password=elvis12345)]
+2025-05-11T13:08:50.141-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:08:50.142-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO(token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbHZpc0B1cGMuZWR1LnBlIiwiaWF0IjoxNzQ2OTg2OTMwL (truncated)...]
+2025-05-11T13:08:50.150-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-11T13:09:12.846-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/categorias/crear", parameters={}
+2025-05-11T13:09:12.846-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.CategoriaPublicacionController#crearCategoria(CategoriaPublicacionDTO)
+2025-05-11T13:09:12.849-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CategoriaPublicacionDTO(id=null, nombreCategoria=Reciclaje)]
+2025-05-11T13:09:12.915-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:09:12.915-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [CategoriaPublicacionDTO(id=1, nombreCategoria=Reciclaje)]
+2025-05-11T13:09:12.916-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-05-11T13:10:11.107-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/publicacion-categoria/asociar", parameters={}
+2025-05-11T13:10:11.107-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionCategoriaController#asociarCategoria(PublicacionCategoriaDTO)
+2025-05-11T13:10:11.110-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [PublicacionCategoriaDTO(id=null, idPublicacion=1, idCategoria=1)]
+2025-05-11T13:10:11.132-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:10:11.133-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PublicacionCategoriaDTO(id=1, idPublicacion=1, idCategoria=1)]
+2025-05-11T13:10:11.134-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-05-11T13:10:42.151-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/publicacion-categoria/publicacion/1", parameters={}
+2025-05-11T13:10:42.151-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionCategoriaController#listarCategoriasPorPublicacion(Long)
+2025-05-11T13:10:42.163-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:10:42.164-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PublicacionCategoriaDTO(id=1, idPublicacion=1, idCategoria=1)]]
+2025-05-11T13:10:42.165-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-11T13:11:30.183-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/publicacion-categoria/asociar", parameters={}
+2025-05-11T13:11:30.183-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionCategoriaController#asociarCategoria(PublicacionCategoriaDTO)
+2025-05-11T13:11:30.184-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [PublicacionCategoriaDTO(id=null, idPublicacion=1, idCategoria=2)]
+2025-05-11T13:11:30.189-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.upc.widegreenapi.controller.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2025-05-11T13:11:30.194-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:11:30.196-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorMessage(status=400, exception=RuntimeException, message=Categoría no encontrada, description=Er (truncated)...]
+2025-05-11T13:11:30.197-05:00  WARN 19292 --- [WideGreenApi] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Categoría no encontrada]
+2025-05-11T13:11:30.198-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-05-11T13:11:37.795-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/publicacion-categoria/asociar", parameters={}
+2025-05-11T13:11:37.796-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionCategoriaController#asociarCategoria(PublicacionCategoriaDTO)
+2025-05-11T13:11:37.797-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [PublicacionCategoriaDTO(id=null, idPublicacion=2, idCategoria=1)]
+2025-05-11T13:11:37.804-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:11:37.804-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PublicacionCategoriaDTO(id=2, idPublicacion=2, idCategoria=1)]
+2025-05-11T13:11:37.805-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-05-11T13:11:43.349-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/publicacion-categoria/publicacion/1", parameters={}
+2025-05-11T13:11:43.349-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionCategoriaController#listarCategoriasPorPublicacion(Long)
+2025-05-11T13:11:43.355-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:11:43.355-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PublicacionCategoriaDTO(id=1, idPublicacion=1, idCategoria=1)]]
+2025-05-11T13:11:43.356-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-11T13:11:49.010-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/publicacion-categoria/publicacion/2", parameters={}
+2025-05-11T13:11:49.010-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionCategoriaController#listarCategoriasPorPublicacion(Long)
+2025-05-11T13:11:49.014-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:11:49.014-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PublicacionCategoriaDTO(id=2, idPublicacion=2, idCategoria=1)]]
+2025-05-11T13:11:49.015-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-11T13:12:10.159-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/categorias/crear", parameters={}
+2025-05-11T13:12:10.159-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.CategoriaPublicacionController#crearCategoria(CategoriaPublicacionDTO)
+2025-05-11T13:12:10.160-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CategoriaPublicacionDTO(id=null, nombreCategoria=Trafico)]
+2025-05-11T13:12:10.164-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:12:10.164-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [CategoriaPublicacionDTO(id=2, nombreCategoria=Trafico)]
+2025-05-11T13:12:10.165-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-05-11T13:12:21.956-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/publicacion-categoria/asociar", parameters={}
+2025-05-11T13:12:21.957-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionCategoriaController#asociarCategoria(PublicacionCategoriaDTO)
+2025-05-11T13:12:21.958-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [PublicacionCategoriaDTO(id=null, idPublicacion=1, idCategoria=2)]
+2025-05-11T13:12:21.963-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:12:21.964-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PublicacionCategoriaDTO(id=3, idPublicacion=1, idCategoria=2)]
+2025-05-11T13:12:21.964-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-05-11T13:12:30.491-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/publicacion-categoria/publicacion/1", parameters={}
+2025-05-11T13:12:30.491-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionCategoriaController#listarCategoriasPorPublicacion(Long)
+2025-05-11T13:12:30.495-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:12:30.496-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PublicacionCategoriaDTO(id=1, idPublicacion=1, idCategoria=1), PublicacionCategoriaDTO(id=3, idPubl (truncated)...]
+2025-05-11T13:12:30.496-05:00 DEBUG 19292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-11T13:13:12.000-05:00  INFO 19292 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-11T13:13:12.039-05:00  INFO 19292 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-11T13:13:12.044-05:00  INFO 19292 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T13:13:12.046-05:00  INFO 19292 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-11T13:13:12.048-05:00  INFO 19292 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-11T13:15:40.110-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 7632 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-11T13:15:40.112-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T13:15:40.149-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-11T13:15:40.149-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-11T13:15:40.837-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T13:15:40.932-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 13 JPA repository interfaces.
+2025-05-11T13:15:41.502-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-11T13:15:41.520-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-11T13:15:41.521-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-11T13:15:41.571-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-11T13:15:41.572-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1422 ms
+2025-05-11T13:15:41.691-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T13:15:41.743-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-11T13:15:41.778-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T13:15:42.028-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T13:15:42.055-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T13:15:42.185-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ceacbf4
+2025-05-11T13:15:42.187-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T13:15:42.244-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T13:15:43.299-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T13:15:44.317-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T13:15:44.672-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T13:15:44.729-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-11T13:15:45.161-05:00  WARN 7632 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-11T13:15:45.296-05:00 DEBUG 7632 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-11T13:15:45.364-05:00 DEBUG 7632 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-11T13:15:45.464-05:00 DEBUG 7632 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-11T13:15:45.502-05:00 DEBUG 7632 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-11T13:15:45.630-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-11T13:15:45.666-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-11T13:15:45.674-05:00  INFO 7632 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 5.938 seconds (process running for 6.446)
+2025-05-11T13:16:06.449-05:00  INFO 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-11T13:16:06.450-05:00  INFO 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-11T13:16:06.450-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-11T13:16:06.450-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-11T13:16:06.450-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-11T13:16:06.452-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6460c0
+2025-05-11T13:16:06.452-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@594f0da9
+2025-05-11T13:16:06.452-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-11T13:16:06.453-05:00  INFO 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-11T13:16:06.644-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/api/categorias/editar", parameters={}
+2025-05-11T13:16:06.645-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.CategoriaPublicacionController#editarCategoria(CategoriaPublicacionDTO)
+2025-05-11T13:16:06.716-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CategoriaPublicacionDTO(id=1, nombreCategoria=Reciclaje y Sostenibilidad)]
+2025-05-11T13:16:06.810-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:16:06.810-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [CategoriaPublicacionDTO(id=1, nombreCategoria=Reciclaje y Sostenibilidad)]
+2025-05-11T13:16:06.821-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-11T13:16:11.697-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/publicacion-categoria/publicacion/1", parameters={}
+2025-05-11T13:16:11.698-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionCategoriaController#listarCategoriasPorPublicacion(Long)
+2025-05-11T13:16:11.715-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-11T13:16:11.716-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PublicacionCategoriaDTO(id=1, idPublicacion=1, idCategoria=1), PublicacionCategoriaDTO(id=3, idPubl (truncated)...]
+2025-05-11T13:16:11.719-05:00 DEBUG 7632 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-11T13:17:01.941-05:00  INFO 7632 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-11T13:17:01.983-05:00  INFO 7632 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-11T13:17:01.987-05:00  INFO 7632 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T13:17:01.990-05:00  INFO 7632 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-11T13:17:01.992-05:00  INFO 7632 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
