@@ -16,6 +16,8 @@ import com.upc.widegreenapi.service.InscripcionEventoService;
 import jakarta.persistence.Tuple;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -46,8 +48,10 @@ public class InscripcionEventoServiceImpl implements InscripcionEventoService {
 
     @Override
     public InscripcionEventoDTO registrarInscripcion(InscripcionEventoDTO inscripcionEventoDTO) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String email = authentication.getName();
 
-        Usuario usuario = usuarioRepository.findById(inscripcionEventoDTO.getIdUsuario())
+        Usuario usuario = usuarioRepository.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
         Evento evento = eventoRepository.findById(inscripcionEventoDTO.getIdEvento())
@@ -57,13 +61,13 @@ public class InscripcionEventoServiceImpl implements InscripcionEventoService {
         Optional<InscripcionEvento> inscripcionExistente = inscripcionEventoRepository.findByUsuarioAndEvento(usuario, evento);
 
         if (inscripcionExistente.isPresent()) {
-            // Si ya está inscrito, cancelamos la inscripción y eliminamos la actividad del calendario
+            // Si ya está inscrito, eliminamos la inscripción y la actividad del calendario
             inscripcionEventoRepository.delete(inscripcionExistente.get());
             eliminarActividadDelCalendario(usuario, evento);
             throw new RuntimeException("Inscripción cancelada. Ya estaba inscrito y fue eliminado.");
         }
 
-        // Verificar si el usuario tiene un calendario, si no, crearlo
+        // Verificar o crear el calendario del usuario
         Calendario calendario = calendarioRepository.findByUsuario(usuario)
                 .orElseGet(() -> {
                     Calendario nuevoCalendario = new Calendario();
@@ -72,13 +76,15 @@ public class InscripcionEventoServiceImpl implements InscripcionEventoService {
                 });
 
         // Crear la inscripción
-        InscripcionEvento inscripcion = new InscripcionEvento();
-        inscripcion.setUsuario(usuario);
-        inscripcion.setEvento(evento);
-        inscripcion.setFechaInscripcion(LocalDateTime.now());
+        InscripcionEvento inscripcion = InscripcionEvento.builder()
+                .usuario(usuario)
+                .evento(evento)
+                .fechaInscripcion(LocalDateTime.now())
+                .build();
+
         InscripcionEvento guardado = inscripcionEventoRepository.save(inscripcion);
 
-        // Crear la actividad en el calendario
+        // Registrar la actividad en el calendario
         registrarActividadEnCalendario(calendario, evento);
 
         return modelMapper.map(guardado, InscripcionEventoDTO.class);

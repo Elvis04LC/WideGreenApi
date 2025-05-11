@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 
 public class InscripcionEventoDTO {
-    private Long id;
     private Long idUsuario;       // Identificador del usuario inscrito
     private Long idEvento;        // Identificador del evento
     private LocalDateTime fechaInscripcion;
