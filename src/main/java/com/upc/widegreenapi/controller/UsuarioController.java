@@ -29,7 +29,7 @@ public class UsuarioController {
     @Autowired
     private ModelMapper modelMapper;
 
-    @GetMapping
+    @GetMapping("/listar")
     public List<UsuarioDTO> listarUsuarios() {
         return usuarioRepository.findAll()
                 .stream()
