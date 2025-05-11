@@ -26,7 +26,7 @@ public class EventoController {
     }
 
     //Obtener evento por ID
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public EventoDTO obtenerPorId(@PathVariable Long id) {
         return eventoService.obtenerEventoPorId(id);
     }
@@ -44,7 +44,7 @@ public class EventoController {
     }
 
     //Obtener evento por ubicacion
-    @GetMapping("/{ubicacion}")
+    @GetMapping("/ubicacion/{ubicacion}")
     public EventoDTO obtenerEventoPorUbicacion(@PathVariable String ubicacion) {
         return eventoService.obtenerEventoPorUbicacion(ubicacion);
     }
