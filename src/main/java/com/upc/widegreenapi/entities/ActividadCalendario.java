@@ -1,6 +1,8 @@
 package com.upc.widegreenapi.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,12 +29,15 @@ public class ActividadCalendario {
     @JoinColumn(name = "id_evento", nullable = true)
     private Evento evento;
 
-
+    @NotNull
     private String titulo;
 
+    @NotNull
     private LocalDate fecha;
 
+    @NotNull
     private LocalTime hora;
 
+    @Size(max = 500)
     private String descripcion;
 }

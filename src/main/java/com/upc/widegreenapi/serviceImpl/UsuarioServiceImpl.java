@@ -67,7 +67,6 @@ public class UsuarioServiceImpl implements UsuarioService {
                 .build();
         logger.info("Guardando usuario en la base de datos con email: " + usuario.getEmail());
         Usuario savedUser = usuarioRepository.save(usuario);
-        logger.info("Usuario registrado exitosamente con ID: " + savedUser.getIdUsuario());
         UsuarioDTO usuarioDTO = modelMapper.map(savedUser, UsuarioDTO.class);
         logger.info("Usuario registrado exitosamente con ID: " + savedUser.getIdUsuario());
         return usuarioDTO;

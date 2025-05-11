@@ -1,8 +1,6 @@
 package com.upc.widegreenapi.controller;
 
-import com.upc.widegreenapi.exceptions.ErrorMessage;
-import com.upc.widegreenapi.exceptions.InvalidEmailException;
-import com.upc.widegreenapi.exceptions.UsuarioNotFoundException;
+import com.upc.widegreenapi.exceptions.*;
 import com.upc.widegreenapi.serviceImpl.UsuarioServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,6 +32,29 @@ public class GlobalExceptionHandler {
                 .timestamp(LocalDateTime.now())
                 .build();
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(ActivityNotFoundException.class)
+    public ResponseEntity<ErrorMessage> handleActividadNoEncontradaException(ActivityNotFoundException ex) {
+        ErrorMessage error = ErrorMessage.builder()
+                .status(HttpStatus.NOT_FOUND.value())
+                .exception(ex.getClass().getSimpleName())
+                .message(ex.getMessage())
+                .description("No se encontraron actividades para el calendario especificado.")
+                .timestamp(LocalDateTime.now())
+                .build();
+        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+    }
+    @ExceptionHandler(EventNotFoundException.class)
+    public ResponseEntity<ErrorMessage> handleEventoNoEncontradoException(EventNotFoundException ex) {
+        ErrorMessage error = ErrorMessage.builder()
+                .status(HttpStatus.NOT_FOUND.value())
+                .exception(ex.getClass().getSimpleName())
+                .message(ex.getMessage())
+                .description("El evento solicitado no se encontró o no está disponible.")
+                .timestamp(LocalDateTime.now())
+                .build();
+
+        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorMessage> handleRuntimeException(RuntimeException ex) {
