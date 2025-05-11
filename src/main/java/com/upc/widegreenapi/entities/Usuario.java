@@ -38,6 +38,4 @@ public class Usuario {
 
     @Column(nullable = false)
     private String role; // Ej: ADMIN o USER
-
-    //Borrar atributo edad
 }
