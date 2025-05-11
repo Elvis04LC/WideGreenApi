@@ -58,6 +58,7 @@ public class EventoServiceImpl implements EventoService {
         return modelMapper.map(evento, EventoDTO.class);
     }
 
+
     @Override
     public EventoDTO actualizarEvento(Long id, EventoDTO eventoDTO) {
         Evento evento = eventoRepository.findById(id)
@@ -80,5 +81,11 @@ public class EventoServiceImpl implements EventoService {
     @Override
     public void eliminarEvento(Long id) {
         eventoRepository.deleteById(id);
+    }
+
+    @Override
+    public EventoDTO obtenerEventoPorUbicacion(String ubicacion) {
+        Evento evento = eventoRepository.findByUbicacion(ubicacion).orElseThrow(()-> new RuntimeException("Evento en "+ ubicacion + " no encontrado"));
+        return modelMapper.map(evento, EventoDTO.class);
     }
 }

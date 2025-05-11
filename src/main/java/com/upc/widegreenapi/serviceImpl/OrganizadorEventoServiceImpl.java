@@ -31,5 +31,11 @@ public class OrganizadorEventoServiceImpl implements OrganizadorEventoService {
                 .map(o -> modelMapper.map(o, OrganizadorEventoDTO.class))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public String eliminarOrganizador(Long id) {
+        organizadorRepository.deleteById(id);
+        return "Organizador de evento eliminado";
+    }
 }
 

@@ -1,8 +1,10 @@
 package com.upc.widegreenapi.controller;
 
+import com.upc.widegreenapi.dtos.MensajeDTO;
 import com.upc.widegreenapi.dtos.OrganizadorEventoDTO;
 import com.upc.widegreenapi.service.OrganizadorEventoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,4 +24,13 @@ public class OrganizadorEventoController {
     public List<OrganizadorEventoDTO> listar() {
         return organizadorService.listarOrganizadores();
     }
+
+    @DeleteMapping("/api/organizadores/{id}")
+    public ResponseEntity<MensajeDTO> eliminarOrganizador(@PathVariable Long id) {
+        MensajeDTO mensajeDTO = new MensajeDTO();
+        mensajeDTO.setMensaje(organizadorService.eliminarOrganizador(id));
+        return ResponseEntity.ok(mensajeDTO);
+    }
+
+
 }

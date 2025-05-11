@@ -2,6 +2,7 @@ package com.upc.widegreenapi.serviceImpl;
 
 import com.upc.widegreenapi.dtos.ActividadCalendarioDTO;
 import com.upc.widegreenapi.dtos.InscripcionEventoDTO;
+import com.upc.widegreenapi.dtos.InscritosPorEventoDTO;
 import com.upc.widegreenapi.entities.Calendario;
 import com.upc.widegreenapi.entities.Evento;
 import com.upc.widegreenapi.entities.InscripcionEvento;
@@ -12,11 +13,13 @@ import com.upc.widegreenapi.repositories.InscripcionEventoRepository;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.ActividadCalendarioService;
 import com.upc.widegreenapi.service.InscripcionEventoService;
+import jakarta.persistence.Tuple;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -124,5 +127,19 @@ public class InscripcionEventoServiceImpl implements InscripcionEventoService {
                 .stream()
                 .map(inscripcion -> modelMapper.map(inscripcion, InscripcionEventoDTO.class))
                 .collect(Collectors.toList());
+    }
+    @Override
+    public List<InscritosPorEventoDTO> mostrarCantidadInscripcionesPorEvento()
+    {
+        List<Tuple> verInscripcionesDeCadaEvento = inscripcionEventoRepository.obtenerTotalInscritosSegunEvento();
+        List<InscritosPorEventoDTO> totalInscritos = new ArrayList<>();
+        ModelMapper modelMapper = new ModelMapper();
+        for (Tuple tuple : verInscripcionesDeCadaEvento) {
+            String nombre = tuple.get(0, String.class);
+            Long totalI = tuple.get(1, Long.class);
+            InscritosPorEventoDTO inscripcionEventoDTO = new InscritosPorEventoDTO(nombre,totalI);
+            totalInscritos.add(inscripcionEventoDTO);
+        }
+        return totalInscritos;
     }
 }

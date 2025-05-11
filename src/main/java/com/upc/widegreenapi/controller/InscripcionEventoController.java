@@ -1,8 +1,10 @@
 package com.upc.widegreenapi.controller;
 
 import com.upc.widegreenapi.dtos.InscripcionEventoDTO;
+import com.upc.widegreenapi.dtos.InscritosPorEventoDTO;
 import com.upc.widegreenapi.service.InscripcionEventoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,4 +31,11 @@ public class InscripcionEventoController {
     public List<InscripcionEventoDTO> listarInscripcionesPorUsuario(@PathVariable Long idUsuario) {
         return inscripcionEventoService.listarInscripcionesPorUsuario(idUsuario);
     }
+
+    //Ver el numero de inscritos por la cantidad de eventos realizados
+    @GetMapping("/CantidadPorEvento")
+    public ResponseEntity<List<InscritosPorEventoDTO>> mostrarCantidadInscripcionesPorEvento() {
+        return ResponseEntity.ok(inscripcionEventoService.mostrarCantidadInscripcionesPorEvento());
+    }
+
 }
