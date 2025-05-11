@@ -29,16 +29,6 @@ public class UsuarioController {
     @Autowired
     private ModelMapper modelMapper;
 
-    @PostMapping("/registrar")
-    public ResponseEntity<UsuarioDTO> registrarUsuario(@RequestBody UsuarioDTO usuarioDTO) {
-        try {
-            UsuarioDTO newUserDTO = usuarioService.registrarUsuario(usuarioDTO);
-            return new ResponseEntity<>(newUserDTO, HttpStatus.CREATED);
-        } catch (InvalidEmailException e) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
-    }
-
     @GetMapping
     public List<UsuarioDTO> listarUsuarios() {
         return usuarioRepository.findAll()

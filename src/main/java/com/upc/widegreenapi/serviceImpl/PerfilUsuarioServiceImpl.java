@@ -8,10 +8,12 @@ import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.PerfilUsuarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @Service
@@ -25,10 +27,32 @@ public class PerfilUsuarioServiceImpl implements PerfilUsuarioService {
     @Autowired
     private ModelMapper modelMapper;
 
+    private static final Logger logger = Logger.getLogger(UsuarioServiceImpl.class.getName());
+
     @Override
     public PerfilUsuarioDTO registrarPerfil(PerfilUsuarioDTO dto) {
-        // Obtener el usuario autenticado
-        Usuario usuario = (Usuario) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        logger.info("Iniciando el registro de un nuevo perfil");
+
+        // Obtener el email del usuario autenticado (consistente con tu CustomUserDetailsService)
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String email = authentication.getName();
+
+        logger.info("Buscando usuario con email: " + email);
+
+        // Buscar por email como en tu CustomUserDetailsService
+        Usuario usuario = usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> {
+                    logger.severe("Usuario no encontrado con email: " + email);
+                    return new RuntimeException("Usuario no encontrado");
+                });
+
+        logger.info("Usuario encontrado - ID: " + usuario.getIdUsuario() + ", Email: " + usuario.getEmail());
+
+        // Verificar si el usuario ya tiene perfil
+        if (perfilUsuarioRepository.existsByUsuario(usuario)) {
+            throw new RuntimeException("El usuario ya tiene un perfil registrado");
+        }
+
 
         PerfilUsuario perfil = new PerfilUsuario();
         perfil.setNombre(dto.getNombre());
@@ -36,6 +60,7 @@ public class PerfilUsuarioServiceImpl implements PerfilUsuarioService {
         perfil.setFoto(dto.getFoto());
         perfil.setBio(dto.getBio());
         perfil.setUsuario(usuario);  // Asocia automáticamente el usuario autenticado
+
         PerfilUsuario guardado = perfilUsuarioRepository.save(perfil);
         return modelMapper.map(guardado, PerfilUsuarioDTO.class);
     }

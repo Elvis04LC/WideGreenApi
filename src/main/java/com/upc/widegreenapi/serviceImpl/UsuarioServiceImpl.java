@@ -1,5 +1,6 @@
 package com.upc.widegreenapi.serviceImpl;
 
+import com.upc.widegreenapi.dtos.RegisterRequestDTO;
 import com.upc.widegreenapi.dtos.UsuarioDTO;
 import com.upc.widegreenapi.entities.Usuario;
 import com.upc.widegreenapi.exceptions.InvalidEmailException;
@@ -35,7 +36,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public UsuarioDTO registrarUsuario(UsuarioDTO dto) {
+    public UsuarioDTO registrarUsuario(RegisterRequestDTO dto) {
 
         logger.info("Iniciando el registro de un nuevo usuario con email: " + dto.getEmail());
         if (dto.getEmail() == null || dto.getEmail().trim().isEmpty()) {
@@ -61,6 +62,8 @@ public class UsuarioServiceImpl implements UsuarioService {
                 .email(dto.getEmail().trim())
                 .password(encodedPassword)
                 .fechaRegistro(LocalDateTime.now())
+                .role("USER") // Asignar rol por defecto
+                .username(dto.getUsername()) // Asegúrate de incluir este campo
                 .build();
         logger.info("Guardando usuario en la base de datos con email: " + usuario.getEmail());
         Usuario savedUser = usuarioRepository.save(usuario);

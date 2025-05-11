@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+
 import java.time.LocalDateTime;
 import java.util.logging.Logger;
 
@@ -29,7 +30,7 @@ public class GlobalExceptionHandler {
                 .status(HttpStatus.BAD_REQUEST.value())
                 .exception(ex.getClass().getSimpleName())
                 .message(ex.getMessage())
-                .description("El email ingresado no tiene un formato válido.")
+                .description("Formato de email inválido. Asegúrese de ingresar un email válido.")
                 .timestamp(LocalDateTime.now())
                 .build();
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);

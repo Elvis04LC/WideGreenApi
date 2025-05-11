@@ -20,10 +20,12 @@ public class CustomUserDetailsService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado: " + email));
 
         // Aquí solo los usuarios admin deben tener acceso
+        String role = usuario.getRole() != null ? usuario.getRole() : "USER";
+
         return User.builder()
                 .username(usuario.getEmail())
                 .password(usuario.getPassword())
-                .roles(usuario.getRole())
+                .roles(role)
                 .build();
     }
 }
