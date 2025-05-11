@@ -25,7 +25,7 @@ public class OrganizadorEventoController {
         return organizadorService.listarOrganizadores();
     }
 
-    @DeleteMapping("/api/organizadores/{id}")
+    @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<MensajeDTO> eliminarOrganizador(@PathVariable Long id) {
         MensajeDTO mensajeDTO = new MensajeDTO();
         mensajeDTO.setMensaje(organizadorService.eliminarOrganizador(id));

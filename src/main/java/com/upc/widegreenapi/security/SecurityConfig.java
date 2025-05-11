@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -45,7 +46,15 @@ public class SecurityConfig {
                         .requestMatchers("/api/noticias/**").authenticated()
                         .requestMatchers("/api/eventos/registrar").hasRole("ADMIN")
                         .requestMatchers("/api/eventos/**").authenticated()
-
+                        .requestMatchers("/api/organizadores/**").hasRole("ADMIN")
+                        .requestMatchers("/api/publicaciones/crear").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/api/publicaciones/editar/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/api/publicaciones/eliminar/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/publicaciones").permitAll()
+                        .requestMatchers("/api/comentarios/crear").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/api/comentarios/publicacion/**").permitAll()
+                        .requestMatchers("/api/comentarios/editar/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/api/comentarios/eliminar/**").hasAnyRole("USER", "ADMIN")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)

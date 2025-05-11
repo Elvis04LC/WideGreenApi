@@ -5,8 +5,11 @@ import com.upc.widegreenapi.entities.Publicacion;
 import com.upc.widegreenapi.entities.Usuario;
 import com.upc.widegreenapi.repositories.PublicacionRepository;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
+import com.upc.widegreenapi.service.PublicacionService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -23,31 +26,31 @@ public class PublicacionController {
     private UsuarioRepository usuarioRepository;
 
     @Autowired
+    private PublicacionService publicacionService;
+
+    @Autowired
     private ModelMapper modelMapper;
 
     @PostMapping("/crear")
-    public PublicacionDTO crearPublicacion(@RequestBody PublicacionDTO dto) {
-        Usuario usuario = usuarioRepository.findByEmail(dto.getUsuarioEmail())
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
-
-        Publicacion publicacion = Publicacion.builder()
-                .titulo(dto.getTitulo())
-                .contenido(dto.getContenido())
-                .fecha(LocalDateTime.now())
-                .usuario(usuario)
-                .build();
-
-        return modelMapper.map(publicacionRepository.save(publicacion), PublicacionDTO.class);
+    public ResponseEntity<PublicacionDTO> crearPublicacion(@RequestBody PublicacionDTO dto) {
+        PublicacionDTO publicacion = publicacionService.crearPublicacion(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(publicacion);
     }
 
     @GetMapping
-    public List<PublicacionDTO> listar() {
-        return publicacionRepository.findAll().stream()
-                .map(pub -> {
-                    PublicacionDTO dto = modelMapper.map(pub, PublicacionDTO.class);
-                    dto.setUsuarioEmail(pub.getUsuario().getEmail());
-                    return dto;
-                })
-                .collect(Collectors.toList());
+    public ResponseEntity<List<PublicacionDTO>> listarPublicaciones() {
+        List<PublicacionDTO> publicaciones = publicacionService.listarPublicaciones();
+        return ResponseEntity.ok(publicaciones);
+    }
+    @PutMapping("/editar/{idPublicacion}")
+    public ResponseEntity<PublicacionDTO> editarPublicacion(@PathVariable Long idPublicacion, @RequestParam String nuevoContenido) {
+        PublicacionDTO actualizada = publicacionService.editarPublicacion(idPublicacion, nuevoContenido);
+        return ResponseEntity.ok(actualizada);
+    }
+
+    @DeleteMapping("/eliminar/{idPublicacion}")
+    public ResponseEntity<Void> eliminarPublicacion(@PathVariable Long idPublicacion) {
+        publicacionService.eliminarPublicacion(idPublicacion);
+        return ResponseEntity.noContent().build();
     }
 }

@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 public class ComentarioDTO {
     private Long idComentario;
+    private Long idPublicacion;
     private String contenido;
     private LocalDateTime fecha;
     private String autorEmail; //email
