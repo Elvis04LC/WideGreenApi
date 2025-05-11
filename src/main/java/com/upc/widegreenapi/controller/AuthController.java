@@ -53,22 +53,4 @@ public class AuthController {
         String token = jwtUtil.generateToken(request.getEmail());
         return ResponseEntity.ok(new AuthResponseDTO(token));
     }
-    @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody RegisterRequestDTO request) {
-        // Verifica si ya existe
-        if (usuarioRepository.findByEmail(request.getEmail()).isPresent()) {
-            return ResponseEntity.badRequest().body("El usuario ya existe");
-        }
-
-        Usuario nuevoUsuario = Usuario.builder()
-                .email(request.getEmail())
-                .username(request.getUsername())
-                .password(passwordEncoder.encode(request.getPassword()))
-                .fechaRegistro(LocalDateTime.now())
-                .role("USER") // Siempre rol normal
-                .build();
-
-        usuarioRepository.save(nuevoUsuario);
-        return ResponseEntity.ok("Usuario registrado exitosamente");
-    }
 }
