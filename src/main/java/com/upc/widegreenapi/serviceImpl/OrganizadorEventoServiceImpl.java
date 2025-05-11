@@ -1,6 +1,5 @@
 package com.upc.widegreenapi.serviceImpl;
 
-import com.upc.widegreenapi.dtos.MensajeDTO;
 import com.upc.widegreenapi.dtos.OrganizadorEventoDTO;
 import com.upc.widegreenapi.entities.OrganizadorEvento;
 import com.upc.widegreenapi.repositories.OrganizadorEventoRepository;
@@ -36,7 +35,7 @@ public class OrganizadorEventoServiceImpl implements OrganizadorEventoService {
     @Override
     public String eliminarOrganizador(Long id) {
         organizadorRepository.deleteById(id);
-        return "Ciudad eliminada";
+        return "Organizador de evento eliminado";
     }
 }
 
