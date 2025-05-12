@@ -22,6 +22,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
         type = SecuritySchemeType.HTTP,
         scheme = "bearer",
         bearerFormat = "JWT"
+        //Security en Swagger
 )
 public class SecurityConfig {
     private final JwtFilter jwtFilter;
