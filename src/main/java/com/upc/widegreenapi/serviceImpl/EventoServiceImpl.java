@@ -83,6 +83,7 @@ public class EventoServiceImpl implements EventoService {
         eventoRepository.deleteById(id);
     }
 
+    //Evento por ubicacion 
     @Override
     public EventoDTO obtenerEventoPorUbicacion(String ubicacion) {
         Evento evento = eventoRepository.findByUbicacion(ubicacion).orElseThrow(()-> new RuntimeException("Evento en "+ ubicacion + " no encontrado"));
