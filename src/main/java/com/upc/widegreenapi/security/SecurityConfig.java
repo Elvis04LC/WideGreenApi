@@ -22,6 +22,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
         type = SecuritySchemeType.HTTP,
         scheme = "bearer",
         bearerFormat = "JWT"
+        //Security en Swagger
 )
 public class SecurityConfig {
     private final JwtFilter jwtFilter;
@@ -62,6 +63,9 @@ public class SecurityConfig {
                         .requestMatchers("/api/categorias/listar").permitAll()
                         .requestMatchers("/api/publicacion-categoria/asociar").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/api/publicacion-categoria/publicacion/**").permitAll()
+                        .requestMatchers("/api/inscripciones/CantidadPorEvento").hasRole("ADMIN")
+                        .requestMatchers("/api/eventos/ubicacion/**").authenticated()
+                        .requestMatchers("/api/organizadores/eliminar/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)

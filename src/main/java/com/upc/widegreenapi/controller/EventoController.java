@@ -43,7 +43,7 @@ public class EventoController {
         eventoService.eliminarEvento(id);
     }
 
-    //Obtener evento por ubicacion
+    //Obtener evento por ubicacion especifica
     @GetMapping("/ubicacion/{ubicacion}")
     public EventoDTO obtenerEventoPorUbicacion(@PathVariable String ubicacion) {
         return eventoService.obtenerEventoPorUbicacion(ubicacion);

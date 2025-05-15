@@ -23,7 +23,7 @@ public class EventoServiceImpl implements EventoService {
 
     @Autowired
     private ModelMapper modelMapper;
-
+    //Registrar Eventos
     @Override
     public EventoDTO crearEvento(EventoDTO dto) {
         TipoEvento tipoEvento = tipoEventoRepository.findById(dto.getIdTipoEvento())
@@ -40,7 +40,7 @@ public class EventoServiceImpl implements EventoService {
 
         return modelMapper.map(eventoRepository.save(evento), EventoDTO.class);
     }
-
+    //Listar eventos
     @Override
     public List<EventoDTO> listarEventos() {
         return eventoRepository.findAll().stream()
@@ -58,7 +58,7 @@ public class EventoServiceImpl implements EventoService {
         return modelMapper.map(evento, EventoDTO.class);
     }
 
-
+    //Actualizar evento
     @Override
     public EventoDTO actualizarEvento(Long id, EventoDTO eventoDTO) {
         Evento evento = eventoRepository.findById(id)
@@ -77,12 +77,13 @@ public class EventoServiceImpl implements EventoService {
         Evento actualizado = eventoRepository.save(evento);
         return modelMapper.map(actualizado, EventoDTO.class);
     }
-
+    //Eliminar evento
     @Override
     public void eliminarEvento(Long id) {
         eventoRepository.deleteById(id);
     }
 
+    //Evento por ubicacion
     @Override
     public EventoDTO obtenerEventoPorUbicacion(String ubicacion) {
         Evento evento = eventoRepository.findByUbicacion(ubicacion).orElseThrow(()-> new RuntimeException("Evento en "+ ubicacion + " no encontrado"));

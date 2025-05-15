@@ -41,6 +41,7 @@ public class ActividadCalendarioServiceImpl implements ActividadCalendarioServic
     @Autowired
     private ModelMapper modelMapper;
 
+    //Registar un actividad en el calendario
     @Override
     public ActividadCalendarioDTO registrarActividad(ActividadCalendarioDTO dto) {
         logger.info("Registrando nueva actividad en el calendario ID: " + dto.getIdCalendario());
