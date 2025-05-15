@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Calendario {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_calendario")
     private Long id;
 
