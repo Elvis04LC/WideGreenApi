@@ -41,6 +41,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/usuarios").hasRole("ADMIN")
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/api/perfil/registrar").hasRole("USER")
                         .requestMatchers("/api/publicaciones/**").authenticated()
                         .requestMatchers("/api/noticias/crear").hasRole("ADMIN")
                         .requestMatchers("/api/noticias/**").authenticated()

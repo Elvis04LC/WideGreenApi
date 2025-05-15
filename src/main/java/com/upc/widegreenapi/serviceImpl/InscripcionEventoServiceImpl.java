@@ -93,6 +93,7 @@ public class InscripcionEventoServiceImpl implements InscripcionEventoService {
     private void registrarActividadEnCalendario(Calendario calendario, Evento evento) {
         ActividadCalendarioDTO actividadDTO = new ActividadCalendarioDTO();
         actividadDTO.setIdCalendario(calendario.getId());
+        actividadDTO.setIdEvento(evento.getIdEvento());
         actividadDTO.setTitulo(evento.getNombre());
         actividadDTO.setFecha(evento.getFecha());
         actividadDTO.setHora(evento.getHora());
