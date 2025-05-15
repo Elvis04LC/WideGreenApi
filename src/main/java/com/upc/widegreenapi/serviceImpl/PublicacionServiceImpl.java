@@ -3,9 +3,12 @@ package com.upc.widegreenapi.serviceImpl;
 import com.upc.widegreenapi.dtos.PublicacionDTO;
 import com.upc.widegreenapi.entities.Publicacion;
 import com.upc.widegreenapi.entities.Usuario;
+import com.upc.widegreenapi.repositories.ComentarioRepository;
+import com.upc.widegreenapi.repositories.PublicacionCategoriaRepository;
 import com.upc.widegreenapi.repositories.PublicacionRepository;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.PublicacionService;
+import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -26,6 +29,11 @@ public class PublicacionServiceImpl implements PublicacionService {
 
     @Autowired
     private ModelMapper modelMapper;
+    @Autowired
+    private ComentarioRepository comentarioRepository;
+
+    @Autowired
+    private PublicacionCategoriaRepository publicacionCategoriaRepository;
 
     @Override
     public PublicacionDTO crearPublicacion(PublicacionDTO dto) {
@@ -80,7 +88,7 @@ public class PublicacionServiceImpl implements PublicacionService {
         Publicacion actualizada = publicacionRepository.save(publicacion);
         return modelMapper.map(actualizada, PublicacionDTO.class);
     }
-
+    @Transactional
     public void eliminarPublicacion(Long idPublicacion) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String email = authentication.getName();
@@ -91,7 +99,13 @@ public class PublicacionServiceImpl implements PublicacionService {
         if (!publicacion.getUsuario().getEmail().equals(email)) {
             throw new RuntimeException("No tienes permiso para eliminar esta publicación");
         }
-
+        System.out.println("Eliminando comentarios...");
+        comentarioRepository.deleteByPublicacionId(idPublicacion);
+        System.out.println("Eliminando asociaciones en publicacion_categoria...");
+        publicacionCategoriaRepository.deleteByPublicacionId(idPublicacion);
+        System.out.println("Eliminando la publicación...");
         publicacionRepository.delete(publicacion);
+
+        System.out.println("Publicación eliminada correctamente.");
     }
 }

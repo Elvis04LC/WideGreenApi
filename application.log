@@ -2705,3 +2705,807 @@ io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period
 2025-05-11T15:43:39.620-05:00  INFO 12688 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-05-11T15:43:39.880-05:00  INFO 12688 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 >>>>>>> b377fdea1aac232da8b8f33974886e9737de5452
+2025-05-15T11:40:45.208-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 33148 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T11:40:45.210-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T11:40:45.254-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T11:40:45.254-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T11:40:46.011-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T11:40:46.085-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 13 JPA repository interfaces.
+2025-05-15T11:40:46.530-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T11:40:46.540-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T11:40:46.541-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T11:40:46.590-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T11:40:46.590-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1336 ms
+2025-05-15T11:40:46.680-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T11:40:46.723-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T11:40:46.752-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T11:40:46.978-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T11:40:47.005-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T11:40:47.129-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@725ffc70
+2025-05-15T11:40:47.131-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T11:40:47.186-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T11:40:48.222-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T11:40:49.392-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T11:40:49.820-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T11:40:49.905-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T11:40:50.394-05:00  WARN 33148 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T11:40:50.556-05:00 DEBUG 33148 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T11:40:50.633-05:00 DEBUG 33148 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T11:40:50.741-05:00 DEBUG 33148 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T11:40:50.785-05:00 DEBUG 33148 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T11:40:50.941-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T11:40:50.976-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T11:40:50.986-05:00  INFO 33148 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 6.253 seconds (process running for 6.833)
+2025-05-15T11:41:47.107-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T11:41:47.107-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T11:41:47.107-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-15T11:41:47.108-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-15T11:41:47.108-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-15T11:41:47.109-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@59389eef
+2025-05-15T11:41:47.110-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@48b7923
+2025-05-15T11:41:47.110-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-15T11:41:47.110-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-15T11:41:47.137-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/register", parameters={}
+2025-05-15T11:41:47.139-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.AuthController#register(RegisterRequestDTO)
+2025-05-15T11:41:47.203-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequestDTO(email=prueba2@gmail.com, username=prueba, password=prueba123)]
+2025-05-15T11:41:47.209-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-2] c.u.w.serviceImpl.UsuarioServiceImpl     : Iniciando el registro de un nuevo usuario con email: prueba2@gmail.com
+2025-05-15T11:41:47.278-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.upc.widegreenapi.controller.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2025-05-15T11:41:47.300-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T11:41:47.302-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorMessage(status=400, exception=ResponseStatusException, message=409 CONFLICT "El nombre de usuar (truncated)...]
+2025-05-15T11:41:47.310-05:00  WARN 33148 --- [WideGreenApi] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.server.ResponseStatusException: 409 CONFLICT "El nombre de usuario ya está registrado."]
+2025-05-15T11:41:47.311-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-05-15T11:41:56.915-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/register", parameters={}
+2025-05-15T11:41:56.915-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.AuthController#register(RegisterRequestDTO)
+2025-05-15T11:41:56.916-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequestDTO(email=prueba3@gmail.com, username=prueba3, password=prueba123)]
+2025-05-15T11:41:56.916-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-4] c.u.w.serviceImpl.UsuarioServiceImpl     : Iniciando el registro de un nuevo usuario con email: prueba3@gmail.com
+2025-05-15T11:41:56.986-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-4] c.u.w.serviceImpl.UsuarioServiceImpl     : Guardando usuario en la base de datos con email: prueba3@gmail.com
+2025-05-15T11:41:57.054-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-4] c.u.w.serviceImpl.UsuarioServiceImpl     : Usuario registrado exitosamente con ID: 4
+2025-05-15T11:41:57.055-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json, application/yaml]
+2025-05-15T11:41:57.057-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Usuario creado con ID: 4"]
+2025-05-15T11:41:57.058-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-05-15T11:42:09.241-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2025-05-15T11:42:09.241-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.AuthController#login(AuthRequestDTO)
+2025-05-15T11:42:09.243-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthRequestDTO(email=prueba3@gmail.com, password=prueba123)]
+2025-05-15T11:42:09.408-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T11:42:09.408-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO(token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwcnVlYmEzQGdtYWlsLmNvbSIsImlhdCI6MTc0NzMyNzMyO (truncated)...]
+2025-05-15T11:42:09.410-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-15T11:42:24.217-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/calendario/crear", parameters={}
+2025-05-15T11:42:24.217-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.CalendarioController#crearCalendario(CalendarioDTO)
+2025-05-15T11:42:24.219-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CalendarioDTO(id=null, idUsuario=null)]
+2025-05-15T11:42:24.219-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-6] c.u.w.serviceImpl.UsuarioServiceImpl     : Iniciando la creación de un nuevo calendario
+2025-05-15T11:42:24.220-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-6] c.u.w.serviceImpl.UsuarioServiceImpl     : Buscando usuario con email: prueba3@gmail.com
+2025-05-15T11:42:24.222-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-6] c.u.w.serviceImpl.UsuarioServiceImpl     : Usuario encontrado - ID: 4, Email: prueba3@gmail.com
+2025-05-15T11:42:24.229-05:00  INFO 33148 --- [WideGreenApi] [http-nio-8080-exec-6] c.u.w.serviceImpl.UsuarioServiceImpl     : Calendario creado con ID: 52 al usuario con nombre: prueba3
+2025-05-15T11:42:24.234-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T11:42:24.235-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [CalendarioDTO(id=52, idUsuario=4)]
+2025-05-15T11:42:24.236-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-05-15T11:50:53.001-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/usuarios/listar", parameters={}
+2025-05-15T11:50:53.001-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.UsuarioController#listarUsuarios()
+2025-05-15T11:50:53.012-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T11:50:53.012-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [[UsuarioDTO(idUsuario=1, email=elvis@upc.edu.pe, username=elvislc, password=$2a$10$Jbg/fUcUc5yMvjUom (truncated)...]
+2025-05-15T11:50:53.014-05:00 DEBUG 33148 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-15T11:51:02.226-05:00  INFO 33148 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T11:51:02.271-05:00  INFO 33148 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T11:51:02.275-05:00  INFO 33148 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T11:51:02.278-05:00  INFO 33148 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T11:51:02.281-05:00  INFO 33148 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T11:51:05.945-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 17816 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T11:51:05.947-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T11:51:05.997-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T11:51:05.997-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T11:51:06.775-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T11:51:06.861-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 13 JPA repository interfaces.
+2025-05-15T11:51:07.332-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T11:51:07.342-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T11:51:07.343-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T11:51:07.388-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T11:51:07.388-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1390 ms
+2025-05-15T11:51:07.484-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T11:51:07.530-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T11:51:07.561-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T11:51:07.803-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T11:51:07.829-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T11:51:07.955-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ceacbf4
+2025-05-15T11:51:07.957-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T11:51:08.018-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T11:51:09.128-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T11:51:10.125-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T11:51:10.474-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T11:51:10.532-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T11:51:10.945-05:00  WARN 17816 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T11:51:11.073-05:00 DEBUG 17816 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T11:51:11.141-05:00 DEBUG 17816 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T11:51:11.255-05:00 DEBUG 17816 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T11:51:11.300-05:00 DEBUG 17816 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T11:51:11.429-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T11:51:11.463-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T11:51:11.472-05:00  INFO 17816 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 5.928 seconds (process running for 6.447)
+2025-05-15T11:51:15.927-05:00  INFO 17816 --- [WideGreenApi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T11:51:15.929-05:00  INFO 17816 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T11:51:15.929-05:00 DEBUG 17816 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-15T11:51:15.929-05:00 DEBUG 17816 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-15T11:51:15.930-05:00 DEBUG 17816 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-15T11:51:15.931-05:00 DEBUG 17816 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@51e72dc2
+2025-05-15T11:51:15.931-05:00 DEBUG 17816 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5c2f7454
+2025-05-15T11:51:15.931-05:00 DEBUG 17816 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-15T11:51:15.932-05:00  INFO 17816 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-15T11:53:58.228-05:00  INFO 17816 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T11:53:58.273-05:00  INFO 17816 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T11:53:58.277-05:00  INFO 17816 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T11:53:58.280-05:00  INFO 17816 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T11:53:58.284-05:00  INFO 17816 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T11:55:31.598-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 23424 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T11:55:31.600-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T11:55:31.645-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T11:55:31.645-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T11:55:32.419-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T11:55:32.504-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 13 JPA repository interfaces.
+2025-05-15T11:55:33.017-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T11:55:33.028-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T11:55:33.028-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T11:55:33.078-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T11:55:33.079-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1433 ms
+2025-05-15T11:55:33.187-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T11:55:33.233-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T11:55:33.265-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T11:55:33.510-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T11:55:33.537-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T11:55:33.681-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1684d4a5
+2025-05-15T11:55:33.684-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T11:55:33.746-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T11:55:34.876-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T11:55:36.213-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T11:55:36.686-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T11:55:36.757-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T11:55:37.247-05:00  WARN 23424 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T11:55:37.403-05:00 DEBUG 23424 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T11:55:37.482-05:00 DEBUG 23424 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T11:55:37.588-05:00 DEBUG 23424 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T11:55:37.632-05:00 DEBUG 23424 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T11:55:37.836-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T11:55:37.890-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T11:55:37.899-05:00  INFO 23424 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 6.752 seconds (process running for 7.343)
+2025-05-15T11:58:21.219-05:00  INFO 23424 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T11:58:21.282-05:00  INFO 23424 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T11:58:21.289-05:00  INFO 23424 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T11:58:21.293-05:00  INFO 23424 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T11:58:21.295-05:00  INFO 23424 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T12:28:22.297-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 30984 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T12:28:22.300-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T12:28:22.351-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T12:28:22.352-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T12:28:23.416-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T12:28:23.534-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 13 JPA repository interfaces.
+2025-05-15T12:28:24.133-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T12:28:24.144-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T12:28:24.145-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T12:28:24.214-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T12:28:24.215-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1862 ms
+2025-05-15T12:28:24.374-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T12:28:24.429-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T12:28:24.468-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T12:28:24.740-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T12:28:24.767-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T12:28:24.914-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c41a430
+2025-05-15T12:28:24.917-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T12:28:24.988-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T12:28:26.167-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T12:28:27.555-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T12:28:27.958-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T12:28:28.034-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T12:28:28.573-05:00  WARN 30984 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T12:28:28.739-05:00 DEBUG 30984 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T12:28:28.827-05:00 DEBUG 30984 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T12:28:28.940-05:00 DEBUG 30984 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T12:28:28.985-05:00 DEBUG 30984 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T12:28:29.157-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T12:28:29.204-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T12:28:29.213-05:00  INFO 30984 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 7.441 seconds (process running for 8.09)
+2025-05-15T12:28:31.205-05:00  INFO 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T12:28:31.206-05:00  INFO 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T12:28:31.206-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-15T12:28:31.206-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-15T12:28:31.206-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-15T12:28:31.207-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4b1308ac
+2025-05-15T12:28:31.207-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3a953920
+2025-05-15T12:28:31.207-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-15T12:28:31.207-05:00  INFO 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-15T12:28:31.280-05:00 ERROR 30984 --- [WideGreenApi] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-05-12T11:22:27Z. Current time: 2025-05-15T12:28:31Z, a difference of 263164279 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.upc.widegreenapi.security.JwtUtil.extractUsername(JwtUtil.java:27) ~[classes/:na]
+	at com.upc.widegreenapi.security.JwtFilter.doFilterInternal(JwtFilter.java:36) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-05-15T12:28:50.382-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2025-05-15T12:28:50.384-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.AuthController#login(AuthRequestDTO)
+2025-05-15T12:28:50.430-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthRequestDTO(email=elvis@upc.edu.pe, password=elvis12345)]
+2025-05-15T12:28:50.673-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:28:50.674-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO(token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbHZpc0B1cGMuZWR1LnBlIiwiaWF0IjoxNzQ3MzMwMTMwL (truncated)...]
+2025-05-15T12:28:50.681-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-15T12:29:02.902-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/publicaciones", parameters={}
+2025-05-15T12:29:02.902-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#listarPublicaciones()
+2025-05-15T12:29:02.944-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:29:02.945-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PublicacionDTO(idPublicacion=1, titulo=Impacto del Cambio Climático, contenido=Hoy quiero hablar so (truncated)...]
+2025-05-15T12:29:02.948-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-15T12:32:05.830-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/publicaciones", parameters={}
+2025-05-15T12:32:05.831-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#listarPublicaciones()
+2025-05-15T12:32:05.835-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:32:05.835-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PublicacionDTO(idPublicacion=1, titulo=Impacto del Cambio Climático, contenido=Hoy quiero hablar so (truncated)...]
+2025-05-15T12:32:05.836-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-15T12:35:46.501-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : PUT "/api/publicaciones/editar/1?nuevoContenido=nUEVOVOVOVOVOVO", parameters={masked}
+2025-05-15T12:35:46.502-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#editarPublicacion(Long, String)
+2025-05-15T12:35:46.548-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:35:46.548-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PublicacionDTO(idPublicacion=1, titulo=Impacto del Cambio Climático, contenido=nUEVOVOVOVOVOVO, fech (truncated)...]
+2025-05-15T12:35:46.549-05:00 DEBUG 30984 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-15T12:36:38.285-05:00  INFO 30984 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T12:36:38.332-05:00  INFO 30984 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T12:36:38.337-05:00  INFO 30984 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T12:36:38.339-05:00  INFO 30984 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T12:36:38.342-05:00  INFO 30984 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T12:36:42.449-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 19672 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T12:36:42.452-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T12:36:42.503-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T12:36:42.504-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T12:36:43.321-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T12:36:43.404-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 13 JPA repository interfaces.
+2025-05-15T12:36:43.946-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T12:36:43.957-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T12:36:43.957-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T12:36:44.004-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T12:36:44.005-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1501 ms
+2025-05-15T12:36:44.118-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T12:36:44.171-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T12:36:44.211-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T12:36:44.467-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T12:36:44.498-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T12:36:44.641-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16e8708c
+2025-05-15T12:36:44.643-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T12:36:44.718-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T12:36:46.144-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T12:36:47.359-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T12:36:47.856-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T12:36:47.940-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T12:36:48.494-05:00  WARN 19672 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T12:36:48.696-05:00 DEBUG 19672 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T12:36:48.786-05:00 DEBUG 19672 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T12:36:48.913-05:00 DEBUG 19672 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T12:36:48.976-05:00 DEBUG 19672 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T12:36:49.151-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T12:36:49.195-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T12:36:49.209-05:00  INFO 19672 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 7.251 seconds (process running for 8.008)
+2025-05-15T12:37:38.667-05:00  INFO 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T12:37:38.667-05:00  INFO 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T12:37:38.668-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-15T12:37:38.668-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-15T12:37:38.668-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-15T12:37:38.669-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@20f8eb61
+2025-05-15T12:37:38.669-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@76a301a9
+2025-05-15T12:37:38.670-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-15T12:37:38.670-05:00  INFO 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-15T12:37:38.863-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : PUT "/api/publicaciones/editar/1", parameters={}
+2025-05-15T12:37:38.865-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#editarPublicacion(Long, String)
+2025-05-15T12:37:38.889-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{<EOL><EOL>    "nuevoContenido" : "HLAAAAA"<EOL><EOL>}"]
+2025-05-15T12:37:39.001-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:37:39.002-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PublicacionDTO(idPublicacion=1, titulo=Impacto del Cambio Climático, contenido={<EOL><EOL>    "nuevoContenid (truncated)...]
+2025-05-15T12:37:39.013-05:00 DEBUG 19672 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-15T12:39:30.384-05:00  INFO 19672 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T12:39:30.430-05:00  INFO 19672 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T12:39:30.434-05:00  INFO 19672 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T12:39:30.437-05:00  INFO 19672 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T12:39:30.439-05:00  INFO 19672 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T12:39:33.847-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 34556 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T12:39:33.849-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T12:39:33.888-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T12:39:33.888-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T12:39:34.630-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T12:39:34.730-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 13 JPA repository interfaces.
+2025-05-15T12:39:35.402-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T12:39:35.421-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T12:39:35.421-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T12:39:35.479-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T12:39:35.479-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1591 ms
+2025-05-15T12:39:35.609-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T12:39:35.664-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T12:39:35.696-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T12:39:35.973-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T12:39:36.008-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T12:39:36.148-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1821209a
+2025-05-15T12:39:36.150-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T12:39:36.212-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T12:39:37.216-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T12:39:38.238-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T12:39:38.613-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T12:39:38.673-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T12:39:39.120-05:00  WARN 34556 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T12:39:39.263-05:00 DEBUG 34556 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T12:39:39.339-05:00 DEBUG 34556 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T12:39:39.446-05:00 DEBUG 34556 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T12:39:39.486-05:00 DEBUG 34556 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T12:39:39.614-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T12:39:39.650-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T12:39:39.660-05:00  INFO 34556 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 6.226 seconds (process running for 6.833)
+2025-05-15T12:39:52.112-05:00  INFO 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T12:39:52.112-05:00  INFO 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T12:39:52.112-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-15T12:39:52.112-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-15T12:39:52.112-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-15T12:39:52.113-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@180f5b19
+2025-05-15T12:39:52.114-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@54de477f
+2025-05-15T12:39:52.114-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-15T12:39:52.114-05:00  INFO 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-15T12:39:52.314-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : PUT "/api/publicaciones/editar/1", parameters={}
+2025-05-15T12:39:52.316-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#editarPublicacion(Long, Map)
+2025-05-15T12:39:52.347-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{nuevoContenido=ESTO ES UNA OPRUEBA DE CAMBIO}]
+2025-05-15T12:39:52.459-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:39:52.460-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PublicacionDTO(idPublicacion=1, titulo=Impacto del Cambio Climático, contenido=null, fecha=2025-05-1 (truncated)...]
+2025-05-15T12:39:52.473-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-05-15T12:41:53.668-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : PUT "/editar/1?nuevoContenido=Este%20es%20el%20contenido%20actualizado%20de%20la%20publicaci%C3%B3n", parameters={masked}
+2025-05-15T12:41:53.669-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-15T12:41:53.672-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-15T12:41:53.674-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource editar/1.]
+2025-05-15T12:41:53.675-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-15T12:42:20.828-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : PUT "/editar/1?nuevoContenido=Este%20es%20el%20contenido%20actualizado%20de%20la%20publicaci%C3%B3n", parameters={masked}
+2025-05-15T12:42:20.829-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-15T12:42:20.830-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-15T12:42:20.831-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource editar/1.]
+2025-05-15T12:42:20.832-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-15T12:44:15.827-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : PUT "/api/publicacion/editar/1?nuevoContenido=Este%20es%20el%20contenido%20actualizado", parameters={masked}
+2025-05-15T12:44:15.827-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-15T12:44:15.829-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-15T12:44:15.830-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/publicacion/editar/1.]
+2025-05-15T12:44:15.830-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-15T12:44:57.186-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : PUT "/api/publicacion/editar/1?nuevoContenido=Nuevo%20contenido", parameters={masked}
+2025-05-15T12:44:57.187-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-15T12:44:57.189-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-15T12:44:57.190-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/publicacion/editar/1.]
+2025-05-15T12:44:57.190-05:00 DEBUG 34556 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-15T12:45:07.480-05:00  INFO 34556 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T12:45:07.522-05:00  INFO 34556 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T12:45:07.528-05:00  INFO 34556 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T12:45:07.530-05:00  INFO 34556 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T12:45:07.533-05:00  INFO 34556 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T12:45:09.493-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 30292 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T12:45:09.495-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T12:45:09.536-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T12:45:09.536-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T12:45:10.351-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T12:45:10.434-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 13 JPA repository interfaces.
+2025-05-15T12:45:10.934-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T12:45:10.946-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T12:45:10.947-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T12:45:10.993-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T12:45:10.993-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1456 ms
+2025-05-15T12:45:11.093-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T12:45:11.139-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T12:45:11.172-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T12:45:11.426-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T12:45:11.452-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T12:45:11.580-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4be9c257
+2025-05-15T12:45:11.581-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T12:45:11.640-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T12:45:12.665-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T12:45:13.725-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T12:45:14.098-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T12:45:14.159-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T12:45:14.598-05:00  WARN 30292 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T12:45:14.736-05:00 DEBUG 30292 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T12:45:14.809-05:00 DEBUG 30292 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T12:45:14.927-05:00 DEBUG 30292 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T12:45:14.977-05:00 DEBUG 30292 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T12:45:15.108-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T12:45:15.144-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T12:45:15.153-05:00  INFO 30292 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 6.059 seconds (process running for 6.716)
+2025-05-15T12:45:20.925-05:00  INFO 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T12:45:20.925-05:00  INFO 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T12:45:20.926-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-15T12:45:20.926-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-15T12:45:20.926-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-15T12:45:20.927-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@55bdc6ba
+2025-05-15T12:45:20.928-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1bcd09e1
+2025-05-15T12:45:20.928-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-15T12:45:20.928-05:00  INFO 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-15T12:45:21.110-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : PUT "/api/publicacion/editar/1?nuevoContenido=Nuevo%20contenido", parameters={masked}
+2025-05-15T12:45:21.113-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-15T12:45:21.122-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-15T12:45:21.126-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/publicacion/editar/1.]
+2025-05-15T12:45:21.127-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-15T12:45:24.048-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/api/publicacion/editar/1?nuevoContenido=Nuevo%20contenido", parameters={masked}
+2025-05-15T12:45:24.048-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-15T12:45:24.050-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-15T12:45:24.051-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/publicacion/editar/1.]
+2025-05-15T12:45:24.051-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-15T12:45:28.931-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : PUT "/api/publicacion/editar/1?nuevoContenido=Nuevocontenido", parameters={masked}
+2025-05-15T12:45:28.932-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-15T12:45:28.934-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-15T12:45:28.935-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/publicacion/editar/1.]
+2025-05-15T12:45:28.936-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-15T12:47:29.481-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/comentarios/crear", parameters={}
+2025-05-15T12:47:29.482-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.ComentarioController#crearComentario(ComentarioDTO)
+2025-05-15T12:47:29.530-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [ComentarioDTO(idComentario=null, idPublicacion=1, contenido=Este es mi segundo comentario sobre la p (truncated)...]
+2025-05-15T12:47:29.626-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:47:29.627-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ComentarioDTO(idComentario=2, idPublicacion=1, contenido=Este es mi segundo comentario sobre la publ (truncated)...]
+2025-05-15T12:47:29.635-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-05-15T12:48:47.760-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : PUT "/api/publicacion/editar/1?nuevoContenido=Nuevocontenido", parameters={masked}
+2025-05-15T12:48:47.761-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-15T12:48:47.762-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-15T12:48:47.762-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/publicacion/editar/1.]
+2025-05-15T12:48:47.762-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-05-15T12:50:26.722-05:00 ERROR 30292 --- [WideGreenApi] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.security.core.userdetails.UsernameNotFoundException: Usuario no encontrado: admin@widegreen.com
+	at com.upc.widegreenapi.security.CustomUserDetailsService.lambda$loadUserByUsername$0(CustomUserDetailsService.java:20) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.upc.widegreenapi.security.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:20) ~[classes/:na]
+	at com.upc.widegreenapi.security.JwtFilter.doFilterInternal(JwtFilter.java:39) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-05-15T12:50:31.805-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : DELETE "/api/publicaciones/eliminar/1", parameters={}
+2025-05-15T12:50:31.806-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#eliminarPublicacion(Long)
+2025-05-15T12:50:31.817-05:00  WARN 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2025-05-15T12:50:31.817-05:00 ERROR 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: update o delete en «publicacion» viola la llave foránea «fktgkcgp4s2b2ctokpolnkygk3a» en la tabla «comentario»
+  Detail: La llave (id_publicacion)=(1) todavía es referida desde la tabla «comentario».
+2025-05-15T12:50:31.824-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.upc.widegreenapi.controller.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2025-05-15T12:50:31.828-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:50:31.830-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorMessage(status=400, exception=DataIntegrityViolationException, message=could not execute statem (truncated)...]
+2025-05-15T12:50:31.832-05:00  WARN 30292 --- [WideGreenApi] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: update o delete en «publicacion» viola la llave foránea «fktgkcgp4s2b2ctokpolnkygk3a» en la tabla «comentario»<EOL>  Detail: La llave (id_publicacion)=(1) todavía es referida desde la tabla «comentario».] [delete from publicacion where id_publicacion=?]; SQL [delete from publicacion where id_publicacion=?]; constraint [null]]
+2025-05-15T12:50:31.832-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-05-15T12:54:22.559-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : DELETE "/api/publicaciones/eliminar/1", parameters={}
+2025-05-15T12:54:22.559-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#eliminarPublicacion(Long)
+2025-05-15T12:54:22.563-05:00  WARN 30292 --- [WideGreenApi] [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2025-05-15T12:54:22.563-05:00 ERROR 30292 --- [WideGreenApi] [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: update o delete en «publicacion» viola la llave foránea «fktgkcgp4s2b2ctokpolnkygk3a» en la tabla «comentario»
+  Detail: La llave (id_publicacion)=(1) todavía es referida desde la tabla «comentario».
+2025-05-15T12:54:22.564-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.upc.widegreenapi.controller.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2025-05-15T12:54:22.564-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:54:22.564-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorMessage(status=400, exception=DataIntegrityViolationException, message=could not execute statem (truncated)...]
+2025-05-15T12:54:22.565-05:00  WARN 30292 --- [WideGreenApi] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: update o delete en «publicacion» viola la llave foránea «fktgkcgp4s2b2ctokpolnkygk3a» en la tabla «comentario»<EOL>  Detail: La llave (id_publicacion)=(1) todavía es referida desde la tabla «comentario».] [delete from publicacion where id_publicacion=?]; SQL [delete from publicacion where id_publicacion=?]; constraint [null]]
+2025-05-15T12:54:22.565-05:00 DEBUG 30292 --- [WideGreenApi] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-05-15T12:58:31.975-05:00  INFO 30292 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T12:58:32.017-05:00  INFO 30292 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T12:58:32.022-05:00  INFO 30292 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T12:58:32.023-05:00  INFO 30292 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T12:58:32.026-05:00  INFO 30292 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T12:58:35.187-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 28264 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T12:58:35.189-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T12:58:35.227-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T12:58:35.228-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T12:58:35.875-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T12:58:35.946-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 13 JPA repository interfaces.
+2025-05-15T12:58:36.375-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T12:58:36.385-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T12:58:36.386-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T12:58:36.427-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T12:58:36.428-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1199 ms
+2025-05-15T12:58:36.517-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T12:58:36.560-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T12:58:36.587-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T12:58:36.808-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T12:58:36.835-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T12:58:36.957-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56adf7dc
+2025-05-15T12:58:36.959-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T12:58:37.013-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T12:58:37.962-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T12:58:38.933-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T12:58:39.272-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T12:58:39.303-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T12:58:39.757-05:00  WARN 28264 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T12:58:39.884-05:00 DEBUG 28264 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T12:58:39.949-05:00 DEBUG 28264 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T12:58:40.043-05:00 DEBUG 28264 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T12:58:40.078-05:00 DEBUG 28264 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T12:58:40.193-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T12:58:40.224-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T12:58:40.232-05:00  INFO 28264 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 5.421 seconds (process running for 5.939)
+2025-05-15T12:58:48.916-05:00  INFO 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T12:58:48.916-05:00  INFO 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T12:58:48.916-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-15T12:58:48.916-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-15T12:58:48.917-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-15T12:58:48.917-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4edc15aa
+2025-05-15T12:58:48.917-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@551f3f9
+2025-05-15T12:58:48.917-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-15T12:58:48.918-05:00  INFO 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-15T12:58:49.089-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : DELETE "/api/publicaciones/eliminar/1", parameters={}
+2025-05-15T12:58:49.090-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#eliminarPublicacion(Long)
+2025-05-15T12:58:49.125-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.upc.widegreenapi.controller.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2025-05-15T12:58:49.162-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T12:58:49.166-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorMessage(status=400, exception=InvalidDataAccessApiUsageException, message=Executing an update/d (truncated)...]
+2025-05-15T12:58:49.175-05:00  WARN 28264 --- [WideGreenApi] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Executing an update/delete query]
+2025-05-15T12:58:49.175-05:00 DEBUG 28264 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-05-15T13:00:02.493-05:00  INFO 28264 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T13:00:02.534-05:00  INFO 28264 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T13:00:02.538-05:00  INFO 28264 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T13:00:02.541-05:00  INFO 28264 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T13:00:02.542-05:00  INFO 28264 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T13:00:05.723-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 29748 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T13:00:05.726-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T13:00:05.765-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T13:00:05.766-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T13:00:06.427-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T13:00:06.498-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 13 JPA repository interfaces.
+2025-05-15T13:00:06.942-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T13:00:06.952-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T13:00:06.952-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T13:00:06.995-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T13:00:06.995-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1229 ms
+2025-05-15T13:00:07.089-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T13:00:07.134-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T13:00:07.163-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T13:00:07.386-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T13:00:07.415-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T13:00:07.643-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ab59dbc
+2025-05-15T13:00:07.645-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T13:00:07.698-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T13:00:08.628-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T13:00:09.594-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T13:00:09.928-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T13:00:09.959-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T13:00:10.402-05:00  WARN 29748 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T13:00:10.527-05:00 DEBUG 29748 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T13:00:10.593-05:00 DEBUG 29748 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T13:00:10.684-05:00 DEBUG 29748 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T13:00:10.719-05:00 DEBUG 29748 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T13:00:10.827-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T13:00:10.858-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T13:00:10.865-05:00  INFO 29748 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 5.518 seconds (process running for 6.045)
+2025-05-15T13:00:14.507-05:00  INFO 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T13:00:14.507-05:00  INFO 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T13:00:14.507-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-15T13:00:14.507-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-15T13:00:14.507-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-15T13:00:14.508-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4db3f929
+2025-05-15T13:00:14.509-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@599a1db6
+2025-05-15T13:00:14.509-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-15T13:00:14.509-05:00  INFO 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-15T13:00:14.678-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : DELETE "/api/publicaciones/eliminar/1", parameters={}
+2025-05-15T13:00:14.680-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#eliminarPublicacion(Long)
+2025-05-15T13:00:14.714-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.upc.widegreenapi.controller.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2025-05-15T13:00:14.749-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T13:00:14.752-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorMessage(status=400, exception=InvalidDataAccessApiUsageException, message=Executing an update/d (truncated)...]
+2025-05-15T13:00:14.762-05:00  WARN 29748 --- [WideGreenApi] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Executing an update/delete query]
+2025-05-15T13:00:14.763-05:00 DEBUG 29748 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-05-15T13:01:11.205-05:00  INFO 29748 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T13:01:11.247-05:00  INFO 29748 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T13:01:11.251-05:00  INFO 29748 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T13:01:11.253-05:00  INFO 29748 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T13:01:11.256-05:00  INFO 29748 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T13:01:14.545-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Starting WideGreenApiApplication using Java 17.0.13 with PID 14296 (D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi\target\classes started by USUARIO in D:\UPC\6TO CICLO\ARQUI WEB\WiseGreenApi\WiseGreenApi)
+2025-05-15T13:01:14.547-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T13:01:14.583-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15T13:01:14.583-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15T13:01:15.252-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T13:01:15.328-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 13 JPA repository interfaces.
+2025-05-15T13:01:15.764-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T13:01:15.773-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T13:01:15.775-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T13:01:15.816-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T13:01:15.817-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1232 ms
+2025-05-15T13:01:15.911-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T13:01:15.954-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T13:01:15.984-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T13:01:16.204-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T13:01:16.230-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T13:01:16.462-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7122784d
+2025-05-15T13:01:16.465-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T13:01:16.517-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T13:01:17.449-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T13:01:18.434-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T13:01:18.771-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-15T13:01:18.803-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T13:01:19.274-05:00  WARN 14296 --- [WideGreenApi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T13:01:19.399-05:00 DEBUG 14296 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 60 mappings in 'requestMappingHandlerMapping'
+2025-05-15T13:01:19.467-05:00 DEBUG 14296 --- [WideGreenApi] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-15T13:01:19.556-05:00 DEBUG 14296 --- [WideGreenApi] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-15T13:01:19.592-05:00 DEBUG 14296 --- [WideGreenApi] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-15T13:01:19.705-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15T13:01:19.736-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T13:01:19.745-05:00  INFO 14296 --- [WideGreenApi] [restartedMain] c.u.w.WideGreenApiApplication            : Started WideGreenApiApplication in 5.569 seconds (process running for 6.107)
+2025-05-15T13:01:24.712-05:00  INFO 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T13:01:24.713-05:00  INFO 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T13:01:24.713-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-05-15T13:01:24.713-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-05-15T13:01:24.713-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-05-15T13:01:24.714-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3bc3957e
+2025-05-15T13:01:24.714-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@37b92ff0
+2025-05-15T13:01:24.714-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-15T13:01:24.714-05:00  INFO 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-15T13:01:24.885-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : DELETE "/api/publicaciones/eliminar/1", parameters={}
+2025-05-15T13:01:24.886-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.upc.widegreenapi.controller.PublicacionController#eliminarPublicacion(Long)
+2025-05-15T13:01:24.958-05:00  WARN 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2025-05-15T13:01:24.958-05:00 ERROR 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: update o delete en «publicacion» viola la llave foránea «fkb1ek5p9gan2rcpi2bva4afq7c» en la tabla «publicacion_categoria»
+  Detail: La llave (id_publicacion)=(1) todavía es referida desde la tabla «publicacion_categoria».
+2025-05-15T13:01:24.965-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.upc.widegreenapi.controller.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2025-05-15T13:01:25.003-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-05-15T13:01:25.007-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorMessage(status=400, exception=DataIntegrityViolationException, message=could not execute statem (truncated)...]
+2025-05-15T13:01:25.017-05:00  WARN 14296 --- [WideGreenApi] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: update o delete en «publicacion» viola la llave foránea «fkb1ek5p9gan2rcpi2bva4afq7c» en la tabla «publicacion_categoria»<EOL>  Detail: La llave (id_publicacion)=(1) todavía es referida desde la tabla «publicacion_categoria».] [delete from publicacion where id_publicacion=?]; SQL [delete from publicacion where id_publicacion=?]; constraint [null]]
+2025-05-15T13:01:25.018-05:00 DEBUG 14296 --- [WideGreenApi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-05-15T13:03:29.948-05:00  INFO 14296 --- [WideGreenApi] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T13:03:29.988-05:00  INFO 14296 --- [WideGreenApi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T13:03:29.994-05:00  INFO 14296 --- [WideGreenApi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T13:03:29.996-05:00  INFO 14296 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T13:03:29.998-05:00  INFO 14296 --- [WideGreenApi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
