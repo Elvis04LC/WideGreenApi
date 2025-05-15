@@ -44,6 +44,8 @@ public class PublicacionController {
     }
     @PutMapping("/editar/{idPublicacion}")
     public ResponseEntity<PublicacionDTO> editarPublicacion(@PathVariable Long idPublicacion, @RequestParam String nuevoContenido) {
+        System.out.println("ID de Publicación: " + idPublicacion);
+        System.out.println("Nuevo Contenido: " + nuevoContenido);
         PublicacionDTO actualizada = publicacionService.editarPublicacion(idPublicacion, nuevoContenido);
         return ResponseEntity.ok(actualizada);
     }
