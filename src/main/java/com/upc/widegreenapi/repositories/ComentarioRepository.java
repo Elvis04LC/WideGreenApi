@@ -12,7 +12,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ComentarioRepository extends JpaRepository<Comentario, Long> {
-    List<Comentario> findByPublicacion(Publicacion publicacion);
+    @Query("SELECT c FROM Comentario c JOIN FETCH c.usuario WHERE c.publicacion = :publicacion")
+    List<Comentario> findByPublicacion(@Param("publicacion") Publicacion publicacion);
     List<Comentario> findByUsuario(Usuario usuario);
     Optional<Comentario> findByIdComentarioAndUsuario(Long idComentario, Usuario usuario);
 
