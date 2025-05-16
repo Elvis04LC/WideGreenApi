@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class PublicacionCategoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Se puede agregar un ID técnico para facilitar el manejo en JPA
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "id_publicacion", referencedColumnName = "id_publicacion")

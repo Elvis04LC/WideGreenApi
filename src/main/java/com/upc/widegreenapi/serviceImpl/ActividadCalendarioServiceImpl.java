@@ -63,21 +63,17 @@ public class ActividadCalendarioServiceImpl implements ActividadCalendarioServic
 
         logger.info("Calendario encontrado - ID: " + calendario.getId());
 
+        Evento evento = eventoRepository.findById(dto.getIdEvento()).orElseThrow(()->new EventNotFoundException("Evento no encontrado con ID: "+dto.getIdEvento()));
+
         // Crear la actividad
         ActividadCalendario actividad = new ActividadCalendario();
+        actividad.setEvento(evento);
         actividad.setCalendario(calendario);
         actividad.setTitulo(dto.getTitulo());
         actividad.setFecha(dto.getFecha());
         actividad.setHora(dto.getHora());
         actividad.setDescripcion(dto.getDescripcion());
 
-        // Validación del evento (si existe)
-        if (dto.getIdEvento() != null) {
-            Evento evento = eventoRepository.findById(dto.getIdEvento())
-                    .orElseThrow(() -> new EventNotFoundException("Evento no encontrado con ID: " + dto.getIdEvento()));
-
-            actividad.setEvento(evento);
-        }
         ActividadCalendario actividadGuardada = actividadCalendarioRepository.save(actividad);
         ActividadCalendarioDTO respuesta = modelMapper.map(actividadGuardada, ActividadCalendarioDTO.class);
 

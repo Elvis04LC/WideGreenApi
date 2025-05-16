@@ -11,8 +11,6 @@ import java.util.Optional;
 
 public interface ActividadCalendarioRepository extends JpaRepository<ActividadCalendario, Long> {
     List<ActividadCalendario> findByCalendarioId(Long idCalendario);
-    List<ActividadCalendario> findByCalendario(Calendario calendario);
     Optional<ActividadCalendario> findByIdAndCalendarioId(Long id, Long idCalendario);
-
     boolean existsByCalendarioIdAndFechaAndHora(Long idCalendario, LocalDate fecha, LocalTime hora);
 }

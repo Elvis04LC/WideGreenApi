@@ -85,8 +85,10 @@ public class EventoServiceImpl implements EventoService {
 
     //Evento por ubicacion
     @Override
-    public EventoDTO obtenerEventoPorUbicacion(String ubicacion) {
-        Evento evento = eventoRepository.findByUbicacion(ubicacion).orElseThrow(()-> new RuntimeException("Evento en "+ ubicacion + " no encontrado"));
-        return modelMapper.map(evento, EventoDTO.class);
+    public List<EventoDTO> obtenerEventoPorUbicacion(String ubicacion) {
+        List<Evento> eventos = eventoRepository.buscarEventosPorUbicacion(ubicacion);
+        return eventos.stream()
+                .map(evento -> modelMapper.map(evento, EventoDTO.class))
+                .collect(Collectors.toList());
     }
 }

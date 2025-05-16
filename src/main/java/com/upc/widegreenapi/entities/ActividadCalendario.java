@@ -25,8 +25,9 @@ public class ActividadCalendario {
     @JoinColumn(name = "id_calendario", referencedColumnName = "id_calendario")
     private Calendario calendario;
 
+    @NotNull
     @ManyToOne
-    @JoinColumn(name = "id_evento", nullable = true)
+    @JoinColumn(name = "id_evento",  referencedColumnName = "id_evento", nullable = false)
     private Evento evento;
 
     @NotNull

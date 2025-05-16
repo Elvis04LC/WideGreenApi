@@ -68,7 +68,11 @@ public class ComentarioServiceImpl implements ComentarioService {
                 .orElseThrow(() -> new RuntimeException("Publicación no encontrada con ID: " + idPublicacion));
 
         return comentarioRepository.findByPublicacion(publicacion).stream()
-                .map(comentario -> modelMapper.map(comentario, ComentarioDTO.class))
+                .map(comentario -> {
+                    ComentarioDTO comentarioDTO = modelMapper.map(comentario, ComentarioDTO.class);
+                    comentarioDTO.setAutorEmail(comentario.getUsuario().getEmail());
+                    return comentarioDTO;
+                })
                 .collect(Collectors.toList());
     }
 

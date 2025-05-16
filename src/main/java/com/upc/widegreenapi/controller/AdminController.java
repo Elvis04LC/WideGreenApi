@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AdminController {
     @GetMapping("/dashboard")
     public String verDashboardAdmin() {
-        return "Bienvenido al dashboard del ADMIN 🛡️";
+        return "Bienvenido al dashboard del ADMIN";
     }
 }

@@ -1,6 +1,7 @@
 package com.upc.widegreenapi.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,8 +26,9 @@ public class InscripcionEvento {
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
+    @NotNull
     @ManyToOne
-    @JoinColumn(name = "id_evento")
+    @JoinColumn(name = "id_evento", nullable = false)
     private Evento evento;
 
     @Column(name = "fecha_inscripcion")
