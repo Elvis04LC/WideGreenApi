@@ -5,6 +5,7 @@ import com.upc.widegreenapi.entities.Usuario;
 import com.upc.widegreenapi.exceptions.InvalidEmailException;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.UsuarioService;
+import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,7 +17,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 import java.util.stream.Collectors;
-
+@Valid
 @RestController
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
