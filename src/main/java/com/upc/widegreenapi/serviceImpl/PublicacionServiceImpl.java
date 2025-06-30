@@ -50,6 +50,7 @@ public class PublicacionServiceImpl implements PublicacionService {
         Publicacion publicacion = Publicacion.builder()
                 .titulo(dto.getTitulo())
                 .contenido(dto.getContenido())
+                .imagenUrl(dto.getImagenUrl()) // NUEVO
                 .fecha(LocalDateTime.now())
                 .usuario(usuario)
                 .build();

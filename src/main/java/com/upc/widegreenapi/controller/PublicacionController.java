@@ -6,11 +6,15 @@ import com.upc.widegreenapi.entities.Usuario;
 import com.upc.widegreenapi.repositories.PublicacionRepository;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.PublicacionService;
+import com.upc.widegreenapi.serviceImpl.AlmacenamientoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -23,6 +27,9 @@ public class PublicacionController {
     private PublicacionRepository publicacionRepository;
 
     @Autowired
+    private AlmacenamientoService almacenamientoService;
+
+    @Autowired
     private UsuarioRepository usuarioRepository;
 
     @Autowired
@@ -31,11 +38,43 @@ public class PublicacionController {
     @Autowired
     private ModelMapper modelMapper;
 
+
     @PostMapping("/crear")
-    public ResponseEntity<PublicacionDTO> crearPublicacion(@RequestBody PublicacionDTO dto) {
-        PublicacionDTO publicacion = publicacionService.crearPublicacion(dto);
-        return ResponseEntity.status(HttpStatus.CREATED).body(publicacion);
+    public ResponseEntity<PublicacionDTO> crearPublicacion(
+            @RequestParam("titulo") String titulo,
+            @RequestParam("contenido") String contenido,
+            @RequestParam(value = "imagen", required = false) MultipartFile imagenFile) {
+        try {
+            String imagenUrl = null;
+
+            if (imagenFile != null && !imagenFile.isEmpty()) {
+                imagenUrl = almacenamientoService.guardarImagen(imagenFile);
+            }
+
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String email = authentication.getName();
+
+            Usuario usuario = usuarioRepository.findByEmail(email)
+                    .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+
+            Publicacion publicacion = new Publicacion();
+            publicacion.setTitulo(titulo);
+            publicacion.setContenido(contenido);
+            publicacion.setImagenUrl(imagenUrl);
+            publicacion.setFecha(LocalDateTime.now());
+            publicacion.setUsuario(usuario);
+
+            Publicacion guardada = publicacionRepository.save(publicacion);
+
+            PublicacionDTO dto = modelMapper.map(guardada, PublicacionDTO.class);
+
+            return ResponseEntity.status(HttpStatus.CREATED).body(dto);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
+
+
 
     @GetMapping
     public ResponseEntity<List<PublicacionDTO>> listarPublicaciones() {

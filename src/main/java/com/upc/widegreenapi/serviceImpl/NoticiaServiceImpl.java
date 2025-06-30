@@ -19,13 +19,32 @@ public class NoticiaServiceImpl implements NoticiaService {
 
     @Autowired
     private ModelMapper modelMapper;
-
+    @Autowired
+    private AlmacenamientoService almacenamientoService;
     @Override
-    public NoticiaDTO crearNoticia(NoticiaDTO noticiaDTO) {
-        Noticia noticia = modelMapper.map(noticiaDTO, Noticia.class);
+    public NoticiaDTO crearNoticia(NoticiaDTO dto) {
+        // Validaciones básicas (ajusta según tu necesidad)
+        if (dto.getTitulo() == null || dto.getTitulo().isBlank()) {
+            throw new RuntimeException("El título no puede estar vacío");
+        }
+        if (dto.getContenido() == null || dto.getContenido().isBlank()) {
+            throw new RuntimeException("El contenido no puede estar vacío");
+        }
+
+        Noticia noticia = Noticia.builder()
+                .titulo(dto.getTitulo())
+                .contenido(dto.getContenido())
+                .imagenUrl(dto.getImagenUrl())  // Imagen por URL o nombre de archivo guardado
+                .fecha(dto.getFecha())
+                // .distrito(dto.getDistrito())  // Si usas distrito, descomenta y ajusta aquí
+                .build();
+
         Noticia guardada = noticiaRepository.save(noticia);
         return modelMapper.map(guardada, NoticiaDTO.class);
     }
+
+
+
 
     @Override
     public NoticiaDTO obtenerNoticiaPorId(Long id) {
