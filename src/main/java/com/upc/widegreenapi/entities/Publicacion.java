@@ -21,7 +21,7 @@ public class Publicacion {
     private Long idPublicacion;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario")
+    @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
 
     private String titulo;
