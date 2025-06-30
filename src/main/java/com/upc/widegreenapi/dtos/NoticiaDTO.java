@@ -14,5 +14,8 @@ public class NoticiaDTO {
     private Long id;
     private String titulo;
     private String contenido;
+
     private LocalDate fecha;
+    private String imagenUrl; // NUEVO: para incluir la URL de la imagen
+
 }

@@ -37,12 +37,14 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
+                .cors(cors -> {})
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/api/usuarios/listar").hasRole("ADMIN")
                         .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/imagenes/**").permitAll()
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/perfil/registrar").hasRole("USER")
+                        .requestMatchers("/api/perfil/registrar").hasAuthority("ROLE_USER")
                         .requestMatchers("/api/publicaciones/**").authenticated()
                         .requestMatchers("/api/noticias/crear").hasRole("ADMIN")
                         .requestMatchers("/api/noticias/**").authenticated()

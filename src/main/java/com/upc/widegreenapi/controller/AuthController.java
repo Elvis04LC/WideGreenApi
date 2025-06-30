@@ -22,6 +22,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -55,19 +57,28 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
 
-        String token = jwtUtil.generateToken(request.getEmail());
+        UserDetails userDetails = userDetailsService.loadUserByUsername(request.getEmail());
+        String token = jwtUtil.generateToken(userDetails);
+
         return ResponseEntity.ok(new AuthResponseDTO(token));
     }
     @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody RegisterRequestDTO request) {
+    public ResponseEntity<Map<String, Object>> register(@RequestBody RegisterRequestDTO request){
+    Map<String, Object> response = new HashMap<>();
         try {
             UsuarioDTO newUserDTO = usuarioService.registrarUsuario(request);
-            return ResponseEntity.status(HttpStatus.CREATED)
-                    .body("Usuario creado con ID: " + newUserDTO.getIdUsuario());
+            response.put("message", "Usuario creado exitosamente");
+            response.put("id", newUserDTO.getIdUsuario());
+            response.put("email", newUserDTO.getEmail());
+            response.put("username", newUserDTO.getUsername());
+
+            return ResponseEntity.status(HttpStatus.CREATED).body(response);
         } catch (InvalidEmailException e) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
+            response.put("error", e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
         } catch (RuntimeException e) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+            response.put("error", e.getMessage());
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
         }
     }
 }

@@ -29,6 +29,7 @@ public class Usuario {
     @Column(nullable = false)
     private String password;
 
+
     @Column(nullable = false, unique = true)
     @NotNull(message = "El email no puede ser nulo")
     private String email;

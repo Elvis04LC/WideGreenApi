@@ -26,5 +26,8 @@ public class Publicacion {
 
     private String titulo;
     private String contenido;
+    private String imagenUrl; // nueva propiedad
     private LocalDateTime fecha;
+
+
 }
