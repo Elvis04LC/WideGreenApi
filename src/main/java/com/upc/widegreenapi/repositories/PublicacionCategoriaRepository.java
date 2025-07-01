@@ -1,6 +1,7 @@
 package com.upc.widegreenapi.repositories;
 
 
+import com.upc.widegreenapi.entities.Publicacion;
 import com.upc.widegreenapi.entities.PublicacionCategoria;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -18,4 +19,5 @@ public interface PublicacionCategoriaRepository extends JpaRepository <Publicaci
     @Transactional
     @Query("DELETE FROM PublicacionCategoria pc WHERE pc.publicacion.idPublicacion = :idPublicacion")
     void deleteByPublicacionId(@Param("idPublicacion") Long idPublicacion);
+
 }

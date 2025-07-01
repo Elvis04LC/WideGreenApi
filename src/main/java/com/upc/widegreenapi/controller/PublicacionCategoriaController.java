@@ -28,4 +28,5 @@ public class PublicacionCategoriaController {
     public ResponseEntity<List<PublicacionCategoriaDTO>> listarCategoriasPorPublicacion(@PathVariable Long idPublicacion) {
         return ResponseEntity.ok(publicacionCategoriaService.listarCategoriasPorPublicacion(idPublicacion));
     }
+
 }

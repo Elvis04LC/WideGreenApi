@@ -1,6 +1,7 @@
 package com.upc.widegreenapi.serviceImpl;
 
 import com.upc.widegreenapi.dtos.PublicacionCategoriaDTO;
+import com.upc.widegreenapi.dtos.PublicacionDTO;
 import com.upc.widegreenapi.entities.CategoriaPublicacion;
 import com.upc.widegreenapi.entities.Publicacion;
 import com.upc.widegreenapi.entities.PublicacionCategoria;
@@ -54,4 +55,7 @@ public class PublicacionCategoriaServiceImpl implements PublicacionCategoriaServ
                 .map(pc -> modelMapper.map(pc, PublicacionCategoriaDTO.class))
                 .collect(Collectors.toList());
     }
+
+
+
 }

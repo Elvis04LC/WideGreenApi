@@ -43,38 +43,53 @@ public class PublicacionController {
     public ResponseEntity<PublicacionDTO> crearPublicacion(
             @RequestParam("titulo") String titulo,
             @RequestParam("contenido") String contenido,
-            @RequestParam(value = "imagen", required = false) MultipartFile imagenFile) {
+            @RequestParam(value = "imagen", required = false) MultipartFile imagenFile,
+            @RequestParam(value = "urlImagen", required = false) String urlImagen) {
+
         try {
-            String imagenUrl = null;
-
-            if (imagenFile != null && !imagenFile.isEmpty()) {
-                imagenUrl = almacenamientoService.guardarImagen(imagenFile);
-            }
-
+            // Obtener el usuario autenticado
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            String email = authentication.getName();
+            String email = authentication.getName(); // Obtenemos el email del usuario autenticado
+            System.out.println("Usuario autenticado: " + email);
 
+
+            // Buscar el usuario por email
             Usuario usuario = usuarioRepository.findByEmail(email)
                     .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
+            // Crear la URL de la imagen (si existe)
+            String imagenUrl = null;
+            if (imagenFile != null && !imagenFile.isEmpty()) {
+                imagenUrl = almacenamientoService.guardarImagen(imagenFile);
+            } else if (urlImagen != null && !urlImagen.isEmpty()) {
+                imagenUrl = urlImagen;
+            }
+
+            // Crear la publicación y asociar el usuario
             Publicacion publicacion = new Publicacion();
             publicacion.setTitulo(titulo);
             publicacion.setContenido(contenido);
             publicacion.setImagenUrl(imagenUrl);
             publicacion.setFecha(LocalDateTime.now());
-            publicacion.setUsuario(usuario);
+            publicacion.setUsuario(usuario);  // Asegúrate de que el usuario no sea nulo
 
+            // Guardar la publicación en la base de datos
             Publicacion guardada = publicacionRepository.save(publicacion);
 
+            // Convertir la publicación a DTO y devolver la respuesta
             PublicacionDTO dto = modelMapper.map(guardada, PublicacionDTO.class);
-
             return ResponseEntity.status(HttpStatus.CREATED).body(dto);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
-
+    @GetMapping("/categoria/{idCategoria}")
+    public ResponseEntity<List<PublicacionDTO>> obtenerPublicacionesPorCategoria(@PathVariable Long idCategoria) {
+        // Llamar al servicio para obtener las publicaciones filtradas por categoría
+        List<PublicacionDTO> publicaciones = publicacionService.obtenerPublicacionesPorCategoria(idCategoria);
+        return ResponseEntity.status(HttpStatus.OK).body(publicaciones);
+    }
 
     @GetMapping
     public ResponseEntity<List<PublicacionDTO>> listarPublicaciones() {

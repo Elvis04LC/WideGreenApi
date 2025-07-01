@@ -2,6 +2,7 @@ package com.upc.widegreenapi.serviceImpl;
 
 import com.upc.widegreenapi.dtos.PublicacionDTO;
 import com.upc.widegreenapi.entities.Publicacion;
+import com.upc.widegreenapi.entities.PublicacionCategoria;
 import com.upc.widegreenapi.entities.Usuario;
 import com.upc.widegreenapi.repositories.ComentarioRepository;
 import com.upc.widegreenapi.repositories.PublicacionCategoriaRepository;
@@ -108,5 +109,23 @@ public class PublicacionServiceImpl implements PublicacionService {
         publicacionRepository.delete(publicacion);
 
         System.out.println("Publicación eliminada correctamente.");
+    }
+
+    public List<PublicacionDTO> obtenerPublicacionesPorCategoria(Long idCategoria) {
+        // Buscar las relaciones entre publicaciones y categorías para una categoría específica
+        List<PublicacionCategoria> lista = publicacionCategoriaRepository.findByCategoria_Id(idCategoria);
+
+        // Extraer solo las publicaciones relacionadas con la categoría
+        List<Long> idsPublicaciones = lista.stream()
+                .map(pc -> pc.getPublicacion().getIdPublicacion())  // Extraemos los IDs de las publicaciones
+                .collect(Collectors.toList());
+
+        // Ahora buscamos las publicaciones usando esos IDs
+        List<Publicacion> publicaciones = publicacionRepository.findAllById(idsPublicaciones);
+
+        // Convertir las publicaciones a DTO
+        return publicaciones.stream()
+                .map(publicacion -> modelMapper.map(publicacion, PublicacionDTO.class))
+                .collect(Collectors.toList());
     }
 }
