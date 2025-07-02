@@ -10,4 +10,6 @@ public interface PublicacionService {
     PublicacionDTO editarPublicacion(Long idPublicacion, String nuevoContenido);
     void eliminarPublicacion(Long idPublicacion);
     List<PublicacionDTO> obtenerPublicacionesPorCategoria(Long idCategoria);
+    List<PublicacionDTO> listarPorUsuario(Long idUsuario);
+
 }

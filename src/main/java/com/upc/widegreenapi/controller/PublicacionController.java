@@ -1,5 +1,6 @@
 package com.upc.widegreenapi.controller;
 
+import com.upc.widegreenapi.dtos.PerfilUsuarioDTO;
 import com.upc.widegreenapi.dtos.PublicacionDTO;
 import com.upc.widegreenapi.entities.Publicacion;
 import com.upc.widegreenapi.entities.Usuario;
@@ -37,6 +38,7 @@ public class PublicacionController {
 
     @Autowired
     private ModelMapper modelMapper;
+
 
 
     @PostMapping("/crear")
@@ -109,4 +111,17 @@ public class PublicacionController {
         publicacionService.eliminarPublicacion(idPublicacion);
         return ResponseEntity.noContent().build();
     }
+    @GetMapping("/usuario/{idUsuario}")
+    public ResponseEntity<List<PublicacionDTO>> listarPorUsuario() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String email = authentication.getName();
+
+        Usuario usuario = usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+
+        List<PublicacionDTO> publicaciones = publicacionService.listarPorUsuario(usuario.getIdUsuario());
+        return ResponseEntity.ok(publicaciones);
+    }
+
+
 }
