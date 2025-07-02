@@ -128,4 +128,11 @@ public class PublicacionServiceImpl implements PublicacionService {
                 .map(publicacion -> modelMapper.map(publicacion, PublicacionDTO.class))
                 .collect(Collectors.toList());
     }
+    @Override
+    public List<PublicacionDTO> listarPorUsuario(Long idUsuario) {
+        List<Publicacion> publicaciones = publicacionRepository.findByUsuarioId(idUsuario);
+        return publicaciones.stream()
+                .map(pub -> modelMapper.map(pub, PublicacionDTO.class))
+                .collect(Collectors.toList());
+    }
 }
