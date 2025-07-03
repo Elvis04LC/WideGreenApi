@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/inscripciones")
+@CrossOrigin
 public class InscripcionEventoController {
     @Autowired
     private InscripcionEventoService inscripcionEventoService;
