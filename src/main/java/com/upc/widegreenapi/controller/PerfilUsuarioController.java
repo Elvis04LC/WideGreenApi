@@ -6,13 +6,16 @@ import com.upc.widegreenapi.entities.Usuario;
 import com.upc.widegreenapi.repositories.PerfilUsuarioRepository;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.PerfilUsuarioService;
+import com.upc.widegreenapi.serviceImpl.AlmacenamientoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -26,9 +29,34 @@ public class PerfilUsuarioController {
     private UsuarioRepository usuarioRepository;
     @Autowired
     private PerfilUsuarioRepository perfilUsuarioRepository;
+
+    @Autowired
+    private AlmacenamientoService almacenamientoService;
+
     @PostMapping("/registrar")
-    public PerfilUsuarioDTO registrarPerfil(@RequestBody PerfilUsuarioDTO dto) {
-        return perfilUsuarioService.registrarPerfil(dto);
+    public ResponseEntity<PerfilUsuarioDTO> registrarPerfil(
+            @RequestParam("nombre") String nombre,
+            @RequestParam("apellido") String apellido,
+            @RequestParam("bio") String bio,
+            @RequestParam(value = "foto", required = false) MultipartFile fotoFile,
+            @RequestParam(value = "urlfoto", required = false) String urlfoto
+    ) throws IOException {
+        String urlFinal = null;
+
+        if (fotoFile != null && !fotoFile.isEmpty()) {
+            urlFinal = almacenamientoService.guardarImagen(fotoFile);
+        } else if (urlfoto != null && !urlfoto.isEmpty()) {
+            urlFinal = urlfoto;
+        }
+
+        PerfilUsuarioDTO dto = new PerfilUsuarioDTO();
+        dto.setNombre(nombre);
+        dto.setApellido(apellido);
+        dto.setBio(bio);
+        dto.setFoto(urlFinal);
+
+        PerfilUsuarioDTO registrado = perfilUsuarioService.registrarPerfil(dto);
+        return ResponseEntity.ok(registrado);
     }
     @GetMapping("/autenticado")
     public ResponseEntity<PerfilUsuarioDTO> obtenerPerfilAutenticado() {

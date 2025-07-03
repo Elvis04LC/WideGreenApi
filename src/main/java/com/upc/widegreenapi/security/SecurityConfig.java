@@ -50,9 +50,13 @@ public class SecurityConfig {
                         .requestMatchers("/api/publicaciones/**").authenticated()
                         .requestMatchers("/api/noticias/crear").hasRole("ADMIN")
                         .requestMatchers("/api/noticias/**").authenticated()
+                        .requestMatchers("/api/eventos/organizador").permitAll()
                         .requestMatchers("/api/eventos/registrar").hasRole("ADMIN")
                         .requestMatchers("/api/eventos/**").authenticated()
-                        .requestMatchers("/api/organizadores/**").hasRole("ADMIN")
+
+                        .requestMatchers(HttpMethod.POST, "/api/organizadores/registrar").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/organizadores/eliminar/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/organizadores").permitAll()
                         .requestMatchers("/api/publicaciones/crear").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/api/publicaciones/editar/**").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/api/publicaciones/eliminar/**").hasAnyRole("USER", "ADMIN")
@@ -69,7 +73,11 @@ public class SecurityConfig {
                         .requestMatchers("/api/publicacion-categoria/publicacion/**").permitAll()
                         .requestMatchers("/api/inscripciones/CantidadPorEvento").hasRole("ADMIN")
                         .requestMatchers("/api/eventos/ubicacion/**").authenticated()
-                        .requestMatchers("/api/organizadores/eliminar/**").hasRole("ADMIN")
+                        .requestMatchers("/api/organizadores/**").hasRole("ADMIN")
+                        .requestMatchers("/api/usuarios/autenticado").authenticated()
+                        .requestMatchers("/api/mapa-distritos").permitAll()
+
+
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
