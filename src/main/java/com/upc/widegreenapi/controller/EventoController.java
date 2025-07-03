@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/eventos")
+@CrossOrigin()
 public class EventoController {
     @Autowired
     private EventoService eventoService;
