@@ -16,10 +16,11 @@ public class CalendarioController {
     private CalendarioService calendarioService;
 
     @PostMapping("/crear")
-    public ResponseEntity<CalendarioDTO> crearCalendario(@RequestBody CalendarioDTO calendarioDTO) {
-        CalendarioDTO creado = calendarioService.crearCalendario(calendarioDTO);
+    public ResponseEntity<CalendarioDTO> crearCalendario() {
+        CalendarioDTO creado = calendarioService.crearCalendario();
         return ResponseEntity.status(HttpStatus.CREATED).body(creado);
     }
+
 
     @GetMapping("/usuario/{idUsuario}")
     public ResponseEntity<CalendarioDTO> obtenerCalendarioPorUsuario(@PathVariable Long idUsuario) {
@@ -38,4 +39,10 @@ public class CalendarioController {
         calendarioService.eliminarCalendario(id);
         return ResponseEntity.ok("Calendario eliminado correctamente.");
     }
+    @GetMapping("/autenticado")
+    public ResponseEntity<CalendarioDTO> obtenerCalendarioAutenticado() {
+        CalendarioDTO calendario = calendarioService.obtenerCalendarioDelUsuarioAutenticado();
+        return ResponseEntity.ok(calendario);
+    }
+
 }

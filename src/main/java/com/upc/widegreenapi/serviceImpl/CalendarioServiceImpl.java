@@ -31,7 +31,7 @@ public class CalendarioServiceImpl implements CalendarioService {
     private ModelMapper modelMapper;
 
     @Override
-    public CalendarioDTO crearCalendario(CalendarioDTO calendarioDTO) {
+    public CalendarioDTO crearCalendario() {
         logger.info("Iniciando la creación de un nuevo calendario");
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -39,7 +39,6 @@ public class CalendarioServiceImpl implements CalendarioService {
 
         logger.info("Buscando usuario con email: " + email);
 
-        // Buscar el usuario autenticado
         Usuario usuario = usuarioRepository.findByEmail(email)
                 .orElseThrow(() -> {
                     logger.severe("Usuario no encontrado con email: " + email);
@@ -48,17 +47,23 @@ public class CalendarioServiceImpl implements CalendarioService {
 
         logger.info("Usuario encontrado - ID: " + usuario.getIdUsuario() + ", Email: " + usuario.getEmail());
 
-        // Crear el calendario y asignarlo al usuario autenticado
+        // Verificar si ya tiene calendario
+        if (calendarioRepository.findByUsuario(usuario).isPresent()) {
+            logger.warning("El usuario ya tiene un calendario creado. Se cancela la operación.");
+            throw new RuntimeException("El usuario ya tiene un calendario registrado.");
+        }
+
         Calendario calendario = Calendario.builder()
                 .usuario(usuario)
                 .build();
 
         Calendario guardado = calendarioRepository.save(calendario);
 
-        logger.info("Calendario creado con ID: " + guardado.getId() + " al usuario con nombre: " + guardado.getUsuario().getUsername());
+        logger.info("Calendario creado con ID: " + guardado.getId());
 
         return modelMapper.map(guardado, CalendarioDTO.class);
     }
+
 
     @Override
     public CalendarioDTO obtenerCalendarioPorUsuario(Long idUsuario) {
@@ -76,6 +81,19 @@ public class CalendarioServiceImpl implements CalendarioService {
         return calendarioRepository.findAll().stream()
                 .map(calendario -> modelMapper.map(calendario, CalendarioDTO.class))
                 .collect(Collectors.toList());
+    }
+    @Override
+    public CalendarioDTO obtenerCalendarioDelUsuarioAutenticado() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String email = authentication.getName();
+
+        Usuario usuario = usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+
+        Calendario calendario = calendarioRepository.findByUsuario(usuario)
+                .orElseThrow(() -> new RuntimeException("Calendario no encontrado"));
+
+        return modelMapper.map(calendario, CalendarioDTO.class);
     }
 
     @Override

@@ -5,6 +5,7 @@ import com.upc.widegreenapi.entities.PerfilUsuario;
 import com.upc.widegreenapi.entities.Usuario;
 import com.upc.widegreenapi.repositories.PerfilUsuarioRepository;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
+import com.upc.widegreenapi.service.CalendarioService;
 import com.upc.widegreenapi.service.PerfilUsuarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ public class PerfilUsuarioServiceImpl implements PerfilUsuarioService {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
+    @Autowired
+    private CalendarioService calendarioService;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -62,6 +65,15 @@ public class PerfilUsuarioServiceImpl implements PerfilUsuarioService {
         perfil.setUsuario(usuario);  // Asocia automáticamente el usuario autenticado
 
         PerfilUsuario guardado = perfilUsuarioRepository.save(perfil);
+        logger.info("Perfil registrado correctamente. Creando calendario asociado...");
+
+        try {
+            calendarioService.crearCalendario();
+            logger.info("Calendario creado correctamente.");
+        } catch (RuntimeException e) {
+            logger.warning("El calendario no se creó: " + e.getMessage());
+        }
+
         return modelMapper.map(guardado, PerfilUsuarioDTO.class);
     }
 
