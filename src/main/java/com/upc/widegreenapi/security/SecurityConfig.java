@@ -70,6 +70,8 @@ public class SecurityConfig {
                         .requestMatchers("/api/inscripciones/CantidadPorEvento").hasRole("ADMIN")
                         .requestMatchers("/api/eventos/ubicacion/**").authenticated()
                         .requestMatchers("/api/organizadores/eliminar/**").hasRole("ADMIN")
+                        .requestMatchers("/api/usuarios/autenticado").authenticated()
+
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)

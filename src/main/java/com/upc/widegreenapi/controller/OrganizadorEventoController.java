@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/organizadores")
+@CrossOrigin
 public class OrganizadorEventoController {
     @Autowired
     private OrganizadorEventoService organizadorService;
