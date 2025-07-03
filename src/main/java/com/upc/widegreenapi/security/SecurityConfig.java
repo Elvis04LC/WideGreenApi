@@ -76,7 +76,9 @@ public class SecurityConfig {
                         .requestMatchers("/api/organizadores/**").hasRole("ADMIN")
                         .requestMatchers("/api/usuarios/autenticado").authenticated()
                         .requestMatchers("/api/mapa-distritos").permitAll()
-
+                        .requestMatchers("/api/foros/todos").permitAll()
+                        .requestMatchers("/api/foros/crear").authenticated()
+                        .requestMatchers("/api/foros/usuario/**").hasRole("ADMIN")
 
                         .anyRequest().authenticated()
                 )
