@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 @Valid
 @RestController
+@CrossOrigin
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
     @Autowired

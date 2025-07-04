@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/actividades-calendario")
-@CrossOrigin(origins = "http://localhost:4200")
 public class ActividadCalendarioController {
     @Autowired
     private ActividadCalendarioService actividadCalendarioService;
