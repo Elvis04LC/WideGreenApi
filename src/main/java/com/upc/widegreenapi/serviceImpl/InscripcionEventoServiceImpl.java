@@ -88,23 +88,9 @@ public class InscripcionEventoServiceImpl implements InscripcionEventoService {
 
         notificacionRepository.save(notificacion);
         // Registrar la actividad en el calendario
-        registrarActividadEnCalendario(calendario, evento);
 
         return modelMapper.map(guardado, InscripcionEventoDTO.class);
     }
-
-    private void registrarActividadEnCalendario(Calendario calendario, Evento evento) {
-        ActividadCalendarioDTO actividadDTO = new ActividadCalendarioDTO();
-        actividadDTO.setIdCalendario(calendario.getId());
-        actividadDTO.setIdEvento(evento.getIdEvento());
-        actividadDTO.setTitulo(evento.getNombre());
-        actividadDTO.setFecha(evento.getFecha());
-        actividadDTO.setHora(evento.getHora());
-        actividadDTO.setDescripcion(evento.getDescripcion());
-
-        actividadCalendarioService.registrarActividad(actividadDTO);
-    }
-
     private void eliminarActividadDelCalendario(Usuario usuario, Evento evento) {
         Calendario calendario = calendarioRepository.findByUsuario(usuario)
                 .orElseThrow(() -> new RuntimeException("Calendario no encontrado"));
