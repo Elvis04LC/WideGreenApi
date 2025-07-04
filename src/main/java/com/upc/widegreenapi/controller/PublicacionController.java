@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/publicaciones")
+@CrossOrigin
 public class PublicacionController {
     @Autowired
     private PublicacionRepository publicacionRepository;
