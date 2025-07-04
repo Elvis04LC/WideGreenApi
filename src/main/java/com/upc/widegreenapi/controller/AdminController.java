@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/api/admin")
+@CrossOrigin
 public class AdminController {
     @GetMapping("/dashboard")
     public String verDashboardAdmin() {

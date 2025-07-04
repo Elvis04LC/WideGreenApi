@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.time.LocalDateTime;
 import java.util.logging.Logger;
 
-@CrossOrigin
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

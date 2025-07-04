@@ -26,10 +26,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin
+
 public class AuthController {
     @Autowired
     private AuthenticationManager authManager;

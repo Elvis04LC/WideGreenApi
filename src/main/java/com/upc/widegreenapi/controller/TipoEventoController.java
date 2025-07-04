@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/api/tipo-evento")
+@CrossOrigin
 public class TipoEventoController {
     @Autowired
     private TipoEventoService tipoEventoService;

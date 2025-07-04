@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/actividades-calendario")
+@CrossOrigin
 public class ActividadCalendarioController {
     @Autowired
     private ActividadCalendarioService actividadCalendarioService;
