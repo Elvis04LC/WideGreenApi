@@ -42,14 +42,22 @@ public class ForoServiceImpl implements ForoService {
         foro.setFechaCreacion(LocalDate.now()); // Usa LocalDate.now() para asignar la fecha de hoy
         Foro foroGuardado = foroRepository.save(foro);
 
-        return modelMapper.map(foroGuardado, ForoDTO.class);
+        ForoDTO foroRespuesta = modelMapper.map(foroGuardado, ForoDTO.class);
+        foroRespuesta.setNombreUsuario(usuario.getUsername()); // 👈 aquí agregamos el nombre
+
+        return foroRespuesta;
+
     }
 
     // Implementación del método para obtener todos los foros
     @Override
     public List<ForoDTO> obtenerForos() {
         List<Foro> foros = foroRepository.findAll();
-        return foros.stream().map(foro -> modelMapper.map(foro, ForoDTO.class)).toList();  // Usamos ModelMapper para mapear cada Foro a ForoDTO
+        return foros.stream().map(foro -> {
+            ForoDTO dto = modelMapper.map(foro, ForoDTO.class);
+            dto.setNombreUsuario(foro.getUsuario().getUsername()); // 👈 aquí seteamos el nombre
+            return dto;
+        }).toList(); // Usamos ModelMapper para mapear cada Foro a ForoDTO
     }
 
     // Implementación del método para obtener foros por usuario

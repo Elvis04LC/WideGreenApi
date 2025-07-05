@@ -15,4 +15,6 @@ public class ForoDTO {
     private String descripcion;
     private Long idUsuario; // Se almacena solo el ID del usuario para la referencia
     private LocalDate fechaCreacion;
+    private String nombreUsuario; // nombre usuario
+
 }
