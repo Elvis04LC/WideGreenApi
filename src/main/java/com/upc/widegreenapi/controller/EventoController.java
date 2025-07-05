@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/eventos")
-@CrossOrigin()
+@CrossOrigin
 public class EventoController {
     @Autowired
     private EventoService eventoService;
@@ -48,5 +48,9 @@ public class EventoController {
     @GetMapping("/ubicacion/{ubicacion}")
     public List<EventoDTO> obtenerEventoPorUbicacion(@PathVariable String ubicacion) {
         return eventoService.obtenerEventoPorUbicacion(ubicacion);
+    }
+    @GetMapping("/usuario/{idUsuario}")
+    public List<EventoDTO> listarEventosPorUsuario(@PathVariable Long idUsuario) {
+        return eventoService.listarEventosPorUsuario(idUsuario); // Implementar lógica de filtrado en el servicio
     }
 }

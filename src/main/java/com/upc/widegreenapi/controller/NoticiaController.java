@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/noticias")
 public class NoticiaController {
     @Autowired

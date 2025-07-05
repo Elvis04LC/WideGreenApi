@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/tipo-evento")
+@CrossOrigin
 public class TipoEventoController {
     @Autowired
     private TipoEventoService tipoEventoService;

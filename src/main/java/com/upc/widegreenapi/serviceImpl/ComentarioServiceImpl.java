@@ -8,6 +8,7 @@ import com.upc.widegreenapi.repositories.ComentarioRepository;
 import com.upc.widegreenapi.repositories.PublicacionRepository;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
 import com.upc.widegreenapi.service.ComentarioService;
+import com.upc.widegreenapi.service.NotificacionService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -31,6 +32,8 @@ public class ComentarioServiceImpl implements ComentarioService {
 
     @Autowired
     private ModelMapper modelMapper;
+    @Autowired
+    private NotificacionService notificacionService;
 
     @Override
     public ComentarioDTO crearComentario(ComentarioDTO dto) {
@@ -56,6 +59,7 @@ public class ComentarioServiceImpl implements ComentarioService {
 
         Comentario guardado = comentarioRepository.save(comentario);
 
+        notificacionService.crearDesdeComentario(publicacion, usuario);
         ComentarioDTO respuesta = modelMapper.map(guardado, ComentarioDTO.class);
         respuesta.setAutorEmail(usuario.getEmail());
 

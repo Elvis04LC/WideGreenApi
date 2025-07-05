@@ -11,5 +11,5 @@ public interface EventoService {
     EventoDTO actualizarEvento(Long id, EventoDTO eventoDTO);
     void eliminarEvento(Long id);
     List<EventoDTO> obtenerEventoPorUbicacion(String ubicacion);//Implementar metodo evento por ubicación
-
+    List<EventoDTO> listarEventosPorUsuario(Long idUsuario);
 }

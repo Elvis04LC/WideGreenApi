@@ -3,14 +3,8 @@ package com.upc.widegreenapi.serviceImpl;
 import com.upc.widegreenapi.dtos.ActividadCalendarioDTO;
 import com.upc.widegreenapi.dtos.InscripcionEventoDTO;
 import com.upc.widegreenapi.dtos.InscritosPorEventoDTO;
-import com.upc.widegreenapi.entities.Calendario;
-import com.upc.widegreenapi.entities.Evento;
-import com.upc.widegreenapi.entities.InscripcionEvento;
-import com.upc.widegreenapi.entities.Usuario;
-import com.upc.widegreenapi.repositories.CalendarioRepository;
-import com.upc.widegreenapi.repositories.EventoRepository;
-import com.upc.widegreenapi.repositories.InscripcionEventoRepository;
-import com.upc.widegreenapi.repositories.UsuarioRepository;
+import com.upc.widegreenapi.entities.*;
+import com.upc.widegreenapi.repositories.*;
 import com.upc.widegreenapi.service.ActividadCalendarioService;
 import com.upc.widegreenapi.service.InscripcionEventoService;
 import jakarta.persistence.Tuple;
@@ -20,6 +14,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +31,8 @@ public class InscripcionEventoServiceImpl implements InscripcionEventoService {
 
     @Autowired
     private EventoRepository eventoRepository;
-
+    @Autowired
+    private NotificacionRepository notificacionRepository;
     @Autowired
     private CalendarioRepository calendarioRepository;
 
@@ -83,25 +79,18 @@ public class InscripcionEventoServiceImpl implements InscripcionEventoService {
                 .build();
 
         InscripcionEvento guardado = inscripcionEventoRepository.save(inscripcion);
+        Notificacion notificacion = Notificacion.builder()
+                .usuario(usuario)
+                .contenido("Te has inscrito correctamente al evento: " + evento.getNombre())
+                .fecha(LocalDateTime.now())
+                .visto(false)
+                .build();
 
+        notificacionRepository.save(notificacion);
         // Registrar la actividad en el calendario
-        registrarActividadEnCalendario(calendario, evento);
 
         return modelMapper.map(guardado, InscripcionEventoDTO.class);
     }
-
-    private void registrarActividadEnCalendario(Calendario calendario, Evento evento) {
-        ActividadCalendarioDTO actividadDTO = new ActividadCalendarioDTO();
-        actividadDTO.setIdCalendario(calendario.getId());
-        actividadDTO.setIdEvento(evento.getIdEvento());
-        actividadDTO.setTitulo(evento.getNombre());
-        actividadDTO.setFecha(evento.getFecha());
-        actividadDTO.setHora(evento.getHora());
-        actividadDTO.setDescripcion(evento.getDescripcion());
-
-        actividadCalendarioService.registrarActividad(actividadDTO);
-    }
-
     private void eliminarActividadDelCalendario(Usuario usuario, Evento evento) {
         Calendario calendario = calendarioRepository.findByUsuario(usuario)
                 .orElseThrow(() -> new RuntimeException("Calendario no encontrado"));
