@@ -49,4 +49,8 @@ public class EventoController {
     public List<EventoDTO> obtenerEventoPorUbicacion(@PathVariable String ubicacion) {
         return eventoService.obtenerEventoPorUbicacion(ubicacion);
     }
+    @GetMapping("/usuario/{idUsuario}")
+    public List<EventoDTO> listarEventosPorUsuario(@PathVariable Long idUsuario) {
+        return eventoService.listarEventosPorUsuario(idUsuario); // Implementar lógica de filtrado en el servicio
+    }
 }
