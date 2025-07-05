@@ -28,4 +28,7 @@ public class Foro {
 
     @Column(name = "fecha_creacion")
     private LocalDate fechaCreacion;
+
+    @Column(name = "nombre_usuario")
+    private String nombreUsuario;
 }
