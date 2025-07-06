@@ -28,12 +28,13 @@ public class NoticiaController {
             @RequestParam("titulo") String titulo,
             @RequestParam("contenido") String contenido,
             @RequestParam("fecha") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fecha,
-            @RequestParam(value = "imagen", required = false) MultipartFile imagenFile
+            @RequestParam(value = "imagen", required = false) MultipartFile imagenFile,
+            @RequestParam(value = "imagenUrl", required = false) String imagenUrl
     ) {
-        String imagenUrl = null;
+        String finalImagenUrl = imagenUrl;
         try {
             if (imagenFile != null && !imagenFile.isEmpty()) {
-                imagenUrl = almacenamientoService.guardarImagen(imagenFile);
+                finalImagenUrl = almacenamientoService.guardarImagen(imagenFile);
             }
         } catch (IOException e) {
             throw new RuntimeException("Error al guardar la imagen", e);
@@ -43,12 +44,17 @@ public class NoticiaController {
         dto.setTitulo(titulo);
         dto.setContenido(contenido);
         dto.setFecha(fecha);
-        dto.setImagenUrl(imagenUrl);
+        dto.setImagenUrl(finalImagenUrl);
 
         return noticiaService.crearNoticia(dto);
     }
 
-
+    @PostMapping(value = "/crear", consumes = "application/json")
+    @PreAuthorize("hasRole('ADMIN')")
+    public NoticiaDTO crearNoticiaJSON(@RequestBody NoticiaDTO dto) {
+        // Aquí podrías validar la imagenUrl si quieres
+        return noticiaService.crearNoticia(dto);
+    }
     //Listar todas las noticias
     @GetMapping
     public List<NoticiaDTO> listarNoticias() {

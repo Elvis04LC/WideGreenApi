@@ -30,7 +30,11 @@ public class NoticiaServiceImpl implements NoticiaService {
         if (dto.getContenido() == null || dto.getContenido().isBlank()) {
             throw new RuntimeException("El contenido no puede estar vacío");
         }
-
+        if (dto.getImagenUrl() != null && !dto.getImagenUrl().isBlank()) {
+            if (!dto.getImagenUrl().startsWith("http")) {
+                throw new RuntimeException("La imagen debe ser una URL válida");
+            }
+        }
         Noticia noticia = Noticia.builder()
                 .titulo(dto.getTitulo())
                 .contenido(dto.getContenido())
