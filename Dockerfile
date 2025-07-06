@@ -1,14 +1,12 @@
-# Usa una imagen oficial de OpenJDK como base
-FROM openjdk:17-jdk-slim
-
-# Establece el directorio de trabajo dentro del contenedor
+# Etapa 1: Build de la app
+FROM maven:3.8.8-amazoncorretto-17 AS build
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Copia el jar construido a la imagen
-COPY target/WideGreenApi-0.0.1-SNAPSHOT.jar app.jar
-
-# Expone el puerto que usará tu aplicación (ajusta si tu app usa otro puerto)
+# Etapa 2: Imagen final
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
-
-# Comando para ejecutar la app
 ENTRYPOINT ["java", "-jar", "app.jar"]
