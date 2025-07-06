@@ -2,6 +2,7 @@ package com.upc.widegreenapi.serviceImpl;
 
 import com.upc.widegreenapi.dtos.RegisterRequestDTO;
 import com.upc.widegreenapi.dtos.UsuarioDTO;
+import com.upc.widegreenapi.dtos.UsuarioMesDTO;
 import com.upc.widegreenapi.entities.Usuario;
 import com.upc.widegreenapi.exceptions.InvalidEmailException;
 import com.upc.widegreenapi.exceptions.UsuarioNotFoundException;
@@ -16,6 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -107,5 +109,22 @@ public class UsuarioServiceImpl implements UsuarioService {
                 .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado"));
         return modelMapper.map(usuario, UsuarioDTO.class);
     }
+    @Override
+    public List<UsuarioMesDTO> cantidadUsuariosPorMes() {
+        List<Object[]> resultados = usuarioRepository.cantidadUsuariosPorMes();
+        List<UsuarioMesDTO> lista = new ArrayList<>();
+        for (Object[] fila : resultados) {
+            Integer numeroMes = ((Number) fila[0]).intValue(); // Mes (1-12)
+            int cantidad = ((Number) fila[1]).intValue();
+            String nombreMes = getNombreMes(numeroMes); // Utilidad para convertir a texto
+            lista.add(new UsuarioMesDTO(nombreMes, cantidad));
+        }
+        return lista;
+    }
 
+    private String getNombreMes(int numeroMes) {
+        String[] nombres = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+                "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+        return (numeroMes >= 1 && numeroMes <= 12) ? nombres[numeroMes - 1] : "Desconocido";
+    }
 }
