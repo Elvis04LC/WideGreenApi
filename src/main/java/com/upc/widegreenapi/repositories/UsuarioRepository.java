@@ -14,6 +14,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     boolean existsByUsername(String username);
 
     @Query("SELECT EXTRACT(MONTH FROM u.fechaRegistro) AS mes, COUNT(u.idUsuario) AS cantidad " +
-            "FROM Usuario u GROUP BY EXTRACT(MONTH FROM u.fechaRegistro) ORDER BY mes")
+            "FROM Usuario u GROUP BY EXTRACT(MONTH FROM u.fechaRegistro) ORDER BY EXTRACT(MONTH FROM u.fechaRegistro)")
     List<Object[]> cantidadUsuariosPorMes();
 }
