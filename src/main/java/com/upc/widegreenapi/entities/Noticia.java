@@ -22,6 +22,7 @@ public class Noticia {
 
     private String titulo;
 
+    @Column(columnDefinition = "TEXT")
     private String contenido;
 
     private LocalDate fecha;
