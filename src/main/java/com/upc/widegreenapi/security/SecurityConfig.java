@@ -79,6 +79,8 @@ public class SecurityConfig {
                         .requestMatchers("/api/foros/todos").permitAll()
                         .requestMatchers("/api/foros/crear").authenticated()
                         .requestMatchers("/api/foros/usuario/**").hasRole("ADMIN")
+                        .requestMatchers("/api/usuarios/usuariosPorMes").hasAnyRole("ADMIN", "USER")
+
 
                         .anyRequest().authenticated()
                 )

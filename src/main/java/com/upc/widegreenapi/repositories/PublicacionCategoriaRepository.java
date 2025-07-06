@@ -20,4 +20,7 @@ public interface PublicacionCategoriaRepository extends JpaRepository <Publicaci
     @Query("DELETE FROM PublicacionCategoria pc WHERE pc.publicacion.idPublicacion = :idPublicacion")
     void deleteByPublicacionId(@Param("idPublicacion") Long idPublicacion);
 
+    @Query("SELECT pc.categoria.nombreCategoria, COUNT(pc.publicacion.idPublicacion) " +
+            "FROM PublicacionCategoria pc GROUP BY pc.categoria.nombreCategoria")
+    List<Object[]> cantidadPublicacionesPorCategoria();
 }

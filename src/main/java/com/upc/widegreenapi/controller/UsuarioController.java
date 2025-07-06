@@ -1,6 +1,7 @@
 package com.upc.widegreenapi.controller;
 
 import com.upc.widegreenapi.dtos.UsuarioDTO;
+import com.upc.widegreenapi.dtos.UsuarioMesDTO;
 import com.upc.widegreenapi.entities.Usuario;
 import com.upc.widegreenapi.exceptions.InvalidEmailException;
 import com.upc.widegreenapi.repositories.UsuarioRepository;
@@ -55,7 +56,10 @@ public class UsuarioController {
                 .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado: " + email));
         return modelMapper.map(usuario, UsuarioDTO.class);
     }
-
+    @GetMapping("/usuariosPorMes")
+    public ResponseEntity<List<UsuarioMesDTO>> usuariosPorMes() {
+        return ResponseEntity.ok(usuarioService.cantidadUsuariosPorMes());
+    }
 
 
 }
